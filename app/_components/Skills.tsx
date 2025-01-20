@@ -69,7 +69,7 @@ export const Skills = () => {
           />
           <h3 className="text-2xl font-semibold tracking-tight">JavaScript</h3>
           <p className="text-sm text-muted-foreground">
-            I&apos;ve also been working with <Code>JavaScript</Code> for 3 years, appreciating its <u>versatility</u> and <u>simplicity</u> for a wide range of applications.
+            I&apos;ve been working with <Code>JavaScript</Code> for 3 years. It&apos;s my go-to language for dynamic and interactive web development, enabling me to build rich user interfaces.
           </p>
         </div>
       </div>
