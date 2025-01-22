@@ -32,6 +32,8 @@ export const Education = (props: EducationProps) => {
       <Link
         href={props.url}
         className="inline-flex items-center gap-4 hover:bg-accent/10 p-4 rounded transition-colors p-1"
+        target="_blank"
+        rel="noopener noreferrer" 
       >
         <img
           src={props.image}

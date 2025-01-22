@@ -10,7 +10,8 @@ import { Code } from "./Code";
 export const Skills = () => {
   return (
     <Section className="flex flex-col items-start gap-4">
-      <Badge variant={"outline"}>Skills</Badge>
+      <Badge variant={"outline"}
+        className="text-lg px-4 py-2 rounded-lg transform transition-transform duration-300 hover:scale-110 hover:bg-accent">Skills</Badge>
       <h2 className="pb-2 text-4xl font-semibold tracking-tight first:mt-0">
         I love working on...
       </h2>
@@ -55,7 +56,7 @@ export const Skills = () => {
           />
           <h3 className="text-2xl font-semibold tracking-tight">Python</h3>
           <p className="text-sm text-muted-foreground">
-            I&apos;ve also been working with <Code>Python</Code> for 3 years, appreciating its <u>versatility</u> and <u>simplicity</u> for a wide range of applications.
+            I&apos;ve also been working with <Code>Python</Code> for 3 years, appreciating its versatility and simplicity for a wide range of applications.
           </p>
         </div>
         {/* JavaScript Logo */}

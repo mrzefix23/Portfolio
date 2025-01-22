@@ -17,7 +17,9 @@ export const Hero = () => {
           I love coding in{" "}
           <Code className="inline-flex items-center gap-1">React</Code>{" "},
           currently studying at{" "}
-          <Link href="https://www.u-bordeaux.fr/">
+          <Link href="https://www.u-bordeaux.fr/"
+          target="_blank"
+          rel="noopener noreferrer">
           <Code className="inline-flex items-center gap-1">Université de Bordeaux</Code>{" "}
           </Link>
           . Living in

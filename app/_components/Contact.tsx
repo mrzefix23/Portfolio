@@ -4,7 +4,7 @@ import { ContactCard } from "./ContactCard";
 
 export const Contact = () => {
     return <Section className="flex flex-col items-start gap-4">
-        <Badge variant={"outline"}>Contact me</Badge>
+        <Badge variant={"outline"}  className="text-lg px-4 py-2 rounded-lg transform transition-transform duration-300 hover:scale-110 hover:bg-accent">Contact me</Badge>
             <h2 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0">
                 I will be happy to work with you!
             </h2>

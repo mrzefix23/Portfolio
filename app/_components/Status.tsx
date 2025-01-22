@@ -18,7 +18,7 @@ export const Status = () => {
                 Logo={project.Logo}
                 title={project.title}
                 description={project.description}
-                url={"/"}
+                url={project.url}
               />
             ))}
           </div>
@@ -76,25 +76,25 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     Logo: Plane,
     title: "Kabylie Airlines",
     description: "A website for a fictional airline",
-    url: "/",
+    url: "https://yanis-mahdi.emi.u-bordeaux.fr/reseau",
   },
   {
     Logo: Rss,
     title: "Nachos",
     description: "An operating system for educational purposes",
-    url: "/",
+    url: "https://yanis-mahdi.emi.u-bordeaux.fr/",
   },
   {
     Logo: Car,
     title: "Ferrari's Loge",
     description: "A website for a fictional store of cars",
-    url: "/",
+    url: "https://yanis-mahdi.emi.u-bordeaux.fr/",
   },
   {
     Logo: Swords,
     title: "CitySimulator",
     description: "A game where you build and manage a city",
-    url: "/",
+    url: "https://yanis-mahdi.emi.u-bordeaux.fr/",
   },
 ];
 
