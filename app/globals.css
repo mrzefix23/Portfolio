@@ -15,9 +15,9 @@ body {
   .shine {
     background: linear-gradient(
       110deg,
-      hsl(var(--background)) 30%,
-      hsl(var(--primary)) 50%,
-      hsl(var(--background)) 70%
+      hsl(var(--background)) 90%,
+      hsl(var(--primary)) 90%,
+      hsl(var(--background)) 90%
     );
     background-size: 200% 200%;
     animation: shine 2s linear infinite;
