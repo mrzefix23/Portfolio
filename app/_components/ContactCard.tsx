@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const ContactCard = (props: {
   image: string;
@@ -12,20 +13,29 @@ export const ContactCard = (props: {
   className?: string;
 }) => {
   return (
-    <Link href={props.url || "#"} className={cn("w-full", props.className)}
-    target="_blank"
-      rel="noopener noreferrer">
+    <Link
+      href={props.url || "#"}
+      className={cn("w-full", props.className)}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <Card className="p-3 bg-accent/10 hover:bg-accent/30 transition-colors group flex items-center gap-4">
         <div className="relative w-10 h-10">
-          <img
+          <Image
             src={props.image}
             alt={`Profile picture of ${props.name}`}
-            className="w-10 h-10 rounded-full object-cover"
+            className="rounded-full object-cover"
+            width={40}
+            height={40}
+            quality={100}
           />
-          <img
+          <Image
             src={props.mediumImage}
             alt={`Medium logo for ${props.name}`}
-            className="w-4 h-4 absolute -bottom-2 -right-1 rounded-full object-cover"
+            className="absolute -bottom-2 -right-1 rounded-full object-cover"
+            width={16} 
+            height={16}
+            quality={100}
           />
         </div>
         <div className="flex-1">
