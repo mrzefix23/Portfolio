@@ -5,7 +5,6 @@ export type EducationProps = {
     title: string;
     role: string;
     date: string;
-    url: string;
   };
 
 export const EducationS: EducationProps[] = [
@@ -15,7 +14,6 @@ export const EducationS: EducationProps[] = [
       title: "Université de Bordeaux",
       role: "Master 1 Software Engineering",
       date: "2024-Present",
-      url: "https://www.u-bordeaux.fr/",
     },
     {
       image:
@@ -23,18 +21,12 @@ export const EducationS: EducationProps[] = [
       title: "Université de Bordeaux",
       role: "Computer Science Degree",
       date: "2021-2024",
-      url: "https://www.u-bordeaux.fr/",
     },
   ];
 
 export const Education = (props: EducationProps) => {
     return (
-      <Link
-        href={props.url}
-        className="inline-flex items-center gap-4 hover:bg-accent/10 p-4 rounded transition-colors p-1"
-        target="_blank"
-        rel="noopener noreferrer" 
-      >
+      <div className="inline-flex items-center gap-4 hover:bg-accent/10 p-4 rounded transition-colors p-1" >
         <img
           src={props.image}
           alt={props.title}
@@ -45,6 +37,6 @@ export const Education = (props: EducationProps) => {
           <p className="text-xs text-muted-foreground">{props.role}</p>
         </div>
           <p className="text-xs text-end text-muted-foreground">{props.date}</p>  
-      </Link>
+      </div>
     );
   };
