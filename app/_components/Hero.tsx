@@ -1,6 +1,7 @@
 import { Section } from "./Section";
 import Link from "next/link";
 import { Code } from "./Code";
+import ShinyText from "../TextAnimations/ShinyText/ShinyText";
 
 
 export const Hero = () => {
@@ -10,9 +11,7 @@ export const Hero = () => {
         <h2 className="font-caption font-bold text-5xl text-primary">
           Yanis Mahdi
         </h2>
-        <h3 className="text-3xl font-caption">
-          Software engineering student
-        </h3>
+        <ShinyText className="text-3xl font-caption tracking-tight first:mt-0" text="Software Engineering Student" disabled={false} speed={6} />
         <p className="text-base">
           I love coding in{" "}
           <Code className="inline-flex items-center gap-1">React</Code>{" "},
@@ -20,7 +19,7 @@ export const Hero = () => {
           <Link href="https://www.u-bordeaux.fr/"
           target="_blank"
           rel="noopener noreferrer">
-          <Code className="inline-flex items-center gap-1">Université de Bordeaux</Code>{" "}
+          <Code className="inline-flex items-center gap-1">University of Bordeaux</Code>{" "}
           </Link>
           . Living in
           <Code className="inline-flex items-center gap-1">
@@ -29,7 +28,7 @@ export const Hero = () => {
       </div>
       <div className="flex-[2] max-md:m-auto ml-auto">
         <img
-          src="https://img.pikbest.com/ai/illus_our/20230421/6469a1d10e3ab9fdc08be511c9a6ab3c.jpg!w700wp"
+          src="https://media.licdn.com/dms/image/v2/D4E03AQFcuNHoExGyQQ/profile-displayphoto-shrink_800_800/B4EZSZFuDCHgAg-/0/1737735201892?e=1743033600&v=beta&t=_XrXBvlzg8a6Zt-qJRlWIy5OUS-V8F1ljbpPa51tkw8"
           className="w-full h-auto max-w-xs max-md:w-56"
           alt="Yanis Mahdi's profile picture"
         />

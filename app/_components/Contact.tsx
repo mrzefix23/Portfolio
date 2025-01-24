@@ -13,7 +13,7 @@ export const Contact = () => {
             <ContactCard
                 className="flex-1"
                 url="https://www.linkedin.com/in/yanis-mahdi-933a37238/"
-                        name="Yanis Mahdi"
+                        name="LinkedIn"
                         image="https://img.pikbest.com/ai/illus_our/20230421/6469a1d10e3ab9fdc08be511c9a6ab3c.jpg!w700wp" 
                         mediumImage="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
                         description={""}
@@ -22,7 +22,7 @@ export const Contact = () => {
             <ContactCard
                 className="flex-1"
                 url="mailto:yanismahdi.net@outlook.fr"
-                        name="contact@outlook.fr"
+                        name="Outlook"
                         image="https://img.pikbest.com/ai/illus_our/20230421/6469a1d10e3ab9fdc08be511c9a6ab3c.jpg!w700wp"
                         mediumImage="https://e1.pngegg.com/pngimages/80/740/png-clipart-microsoft-office-2013-long-shadow-icons-outlook-shadow-thumbnail.png" 
                         description={"Email me for any inquiries!"}
@@ -30,7 +30,7 @@ export const Contact = () => {
              <ContactCard
                 className="flex-1"
                 url="https://github.com/mrzefix23"
-                        name="Yanis Mahdi"
+                        name="Github"
                         image="https://img.pikbest.com/ai/illus_our/20230421/6469a1d10e3ab9fdc08be511c9a6ab3c.jpg!w700wp" 
                         mediumImage="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png" 
                         description={""}

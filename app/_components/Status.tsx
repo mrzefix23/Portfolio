@@ -46,21 +46,21 @@ export const Status = () => {
           <div className="flex flex-col space-y-4">
             <ContactCard
               url="https://www.linkedin.com/in/yanis-mahdi-933a37238/"
-              name="Yanis Mahdi"
+              name="LinkedIn"
               image="https://img.pikbest.com/ai/illus_our/20230421/6469a1d10e3ab9fdc08be511c9a6ab3c.jpg!w700wp"
               mediumImage="https://cdn-icons-png.flaticon.com/512/174/174857.png"
               description={""}
             />
             <ContactCard
               url="mailto:yanismahdi.net@outlook.fr"
-              name="yanismahdi.net@outlook.fr"
+              name="Outlook"
               image="https://img.pikbest.com/ai/illus_our/20230421/6469a1d10e3ab9fdc08be511c9a6ab3c.jpg!w700wp"
               mediumImage="https://e1.pngegg.com/pngimages/80/740/png-clipart-microsoft-office-2013-long-shadow-icons-outlook-shadow-thumbnail.png"
               description={"Email me for any inquiries!"}
             />
             <ContactCard
               url="https://github.com/mrzefix23"
-              name="Yanis Mahdi"
+              name="Github"
               image="https://img.pikbest.com/ai/illus_our/20230421/6469a1d10e3ab9fdc08be511c9a6ab3c.jpg!w700wp"
               mediumImage="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png"
               description={""}
@@ -77,13 +77,13 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     Logo: Gamepad2,
     title: "Takuzu",
     description: "A game of logic and strategy",
-    url: "https://yanis-mahdi.emi.u-bordeaux.fr/takuzu/game.html",
+    url: "https://github.com/mrzefix23/Takuzu",
   },
   {
     Logo: Plane,
     title: "Kabylie Airlines",
     description: "A website for a fictional airline",
-    url: "https://yanis-mahdi.emi.u-bordeaux.fr/reseau",
+    url: "https://yanis-mahdi.emi.u-bordeaux.fr/",
   },
   {
     Logo: Rss,
