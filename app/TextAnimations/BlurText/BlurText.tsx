@@ -9,8 +9,8 @@ interface BlurTextProps {
   direction?: 'top' | 'bottom';
   threshold?: number;
   rootMargin?: string;
-  animationFrom?: Partial<React.CSSProperties>;
-  animationTo?: Partial<React.CSSProperties>[];
+  animationFrom?: Partial<Record<string, SpringValue<any>>>;
+  animationTo?: Partial<Record<string, SpringValue<any>>>[];
   easing?: EasingFunction;
   onAnimationComplete?: () => void;
 }
@@ -34,17 +34,23 @@ const BlurText: React.FC<BlurTextProps> = ({
   const animatedCount = useRef(0);
 
   // Default animations based on direction
-  const defaultFrom: Partial<React.CSSProperties> = direction === 'top'
-    ? { filter: 'blur(10px)', opacity: 0, transform: 'translate3d(0,-50px,0)' }
-    : { filter: 'blur(10px)', opacity: 0, transform: 'translate3d(0,50px,0)' };
+  const defaultFrom: Partial<Record<string, SpringValue<any>>> = {
+    filter: 'blur(10px)' as any,
+    opacity: 0,
+    transform: direction === 'top' ? 'translate3d(0,-50px,0)' : 'translate3d(0,50px,0)',
+  };
 
-  const defaultTo: Partial<React.CSSProperties>[] = [
+  const defaultTo: Partial<Record<string, SpringValue<any>>>[] = [
     {
-      filter: 'blur(5px)',
+      filter: 'blur(5px)' as any,
       opacity: 0.5,
       transform: direction === 'top' ? 'translate3d(0,5px,0)' : 'translate3d(0,-5px,0)',
     },
-    { filter: 'blur(0px)', opacity: 1, transform: 'translate3d(0,0,0)' },
+    {
+      filter: 'blur(0px)' as any,
+      opacity: 1,
+      transform: 'translate3d(0,0,0)',
+    },
   ];
 
   useEffect(() => {
@@ -72,7 +78,7 @@ const BlurText: React.FC<BlurTextProps> = ({
     elements.map((_, i) => ({
       from: animationFrom || defaultFrom,
       to: inView
-        ? async (next: (arg: Partial<Record<string, SpringValue>>) => Promise<void>) => {
+        ? async (next: (arg: Partial<Record<string, SpringValue<any>>>) => Promise<void>) => {
             for (const step of animationTo || defaultTo) {
               await next(step);
             }
