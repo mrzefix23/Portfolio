@@ -1,6 +1,6 @@
 import { Section } from "./Section";
 import { Card } from "@/components/ui/card";
-import { Car, Gamepad2, Plane, Rss, Swords } from "lucide-react";
+import { Car, Gamepad2, House, Plane, Rss, Swords } from "lucide-react";
 import { SideProjectProps, SideProject } from "./SideProjects";
 import { ContactCard } from "./ContactCard";
 import { Education, EducationS } from "./Education";
@@ -47,21 +47,21 @@ export const Status = () => {
             <ContactCard
               url="https://www.linkedin.com/in/yanis-mahdi-933a37238/"
               name="LinkedIn"
-              image="https://img.pikbest.com/ai/illus_our/20230421/6469a1d10e3ab9fdc08be511c9a6ab3c.jpg!w700wp"
+              image="https://media.licdn.com/dms/image/v2/D4D03AQFryKnXEfwwyw/profile-displayphoto-shrink_400_400/B4DZSnEclOG8Ag-/0/1737969748769?e=1743638400&v=beta&t=SeWuIJmerRRnMfu7EV5A3EMt6TDBujRKTH32qiJpGmA"
               mediumImage="https://cdn-icons-png.flaticon.com/512/174/174857.png"
               description={""}
             />
             <ContactCard
               url="mailto:yanismahdi.net@outlook.fr"
               name="Outlook"
-              image="https://img.pikbest.com/ai/illus_our/20230421/6469a1d10e3ab9fdc08be511c9a6ab3c.jpg!w700wp"
+              image="https://media.licdn.com/dms/image/v2/D4D03AQFryKnXEfwwyw/profile-displayphoto-shrink_400_400/B4DZSnEclOG8Ag-/0/1737969748769?e=1743638400&v=beta&t=SeWuIJmerRRnMfu7EV5A3EMt6TDBujRKTH32qiJpGmA"
               mediumImage="https://e1.pngegg.com/pngimages/80/740/png-clipart-microsoft-office-2013-long-shadow-icons-outlook-shadow-thumbnail.png"
               description={"Email me for any inquiries!"}
             />
             <ContactCard
               url="https://github.com/mrzefix23"
               name="Github"
-              image="https://img.pikbest.com/ai/illus_our/20230421/6469a1d10e3ab9fdc08be511c9a6ab3c.jpg!w700wp"
+              image="https://media.licdn.com/dms/image/v2/D4D03AQFryKnXEfwwyw/profile-displayphoto-shrink_400_400/B4DZSnEclOG8Ag-/0/1737969748769?e=1743638400&v=beta&t=SeWuIJmerRRnMfu7EV5A3EMt6TDBujRKTH32qiJpGmA"
               mediumImage="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png"
               description={""}
             />
@@ -76,31 +76,26 @@ const SIDE_PROJECTS: SideProjectProps[] = [
   {
     Logo: Gamepad2,
     title: "Takuzu",
-    description: "A game of logic and strategy",
+    description: "A logic-based puzzle game that challenges your strategic thinking and problem-solving skills.",
     url: "https://github.com/mrzefix23/Takuzu",
-  },
-  {
-    Logo: Plane,
-    title: "Kabylie Airlines",
-    description: "A website for a fictional airline",
-    url: "https://yanis-mahdi.emi.u-bordeaux.fr/",
-  },
-  {
-    Logo: Rss,
-    title: "Nachos",
-    description: "An operating system for educational purposes",
-    url: "https://yanis-mahdi.emi.u-bordeaux.fr/",
-  },
-  {
-    Logo: Car,
-    title: "Ferrari's Loge",
-    description: "A website for a fictional store of cars",
-    url: "https://yanis-mahdi.emi.u-bordeaux.fr/",
   },
   {
     Logo: Swords,
     title: "CitySimulator",
-    description: "A game where you build and manage a city",
-    url: "https://yanis-mahdi.emi.u-bordeaux.fr/",
+    description: "An immersive simulation game where you design, build, and manage a thriving city. You must balance resources to keep your city prosperous and sustainable.",
+    url: "https://github.com/mrzefix23/Java_project_rts/",
+  },
+  {
+    Logo: Car,
+    title: "Ferrari's Lodge",
+    description: "A sleek and modern website created for a fictional luxury Ferrari lodge, showcasing high-end design and functionality.",
+    url: "https://github.com/mrzefix23/ferrari-s_loge",
+  },
+  {
+    Logo: Rss,
+    title: "Nachos",
+    description: "An educational operating system designed to teach fundamental concepts in operating systems and software development.",
+    url: "https://github.com/mrzefix23/Nachos",
   },
 ];
+

@@ -14,7 +14,7 @@ export const Contact = () => {
                 className="flex-1"
                 url="https://www.linkedin.com/in/yanis-mahdi-933a37238/"
                         name="LinkedIn"
-                        image="https://img.pikbest.com/ai/illus_our/20230421/6469a1d10e3ab9fdc08be511c9a6ab3c.jpg!w700wp" 
+                        image="https://media.licdn.com/dms/image/v2/D4D03AQFryKnXEfwwyw/profile-displayphoto-shrink_400_400/B4DZSnEclOG8Ag-/0/1737969748769?e=1743638400&v=beta&t=SeWuIJmerRRnMfu7EV5A3EMt6TDBujRKTH32qiJpGmA" 
                         mediumImage="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
                         description={""}
                          />
@@ -23,7 +23,7 @@ export const Contact = () => {
                 className="flex-1"
                 url="mailto:yanismahdi.net@outlook.fr"
                         name="Outlook"
-                        image="https://img.pikbest.com/ai/illus_our/20230421/6469a1d10e3ab9fdc08be511c9a6ab3c.jpg!w700wp"
+                        image="https://media.licdn.com/dms/image/v2/D4D03AQFryKnXEfwwyw/profile-displayphoto-shrink_400_400/B4DZSnEclOG8Ag-/0/1737969748769?e=1743638400&v=beta&t=SeWuIJmerRRnMfu7EV5A3EMt6TDBujRKTH32qiJpGmA"
                         mediumImage="https://e1.pngegg.com/pngimages/80/740/png-clipart-microsoft-office-2013-long-shadow-icons-outlook-shadow-thumbnail.png" 
                         description={"Email me for any inquiries!"}
                          />
@@ -31,7 +31,7 @@ export const Contact = () => {
                 className="flex-1"
                 url="https://github.com/mrzefix23"
                         name="Github"
-                        image="https://img.pikbest.com/ai/illus_our/20230421/6469a1d10e3ab9fdc08be511c9a6ab3c.jpg!w700wp" 
+                        image="https://media.licdn.com/dms/image/v2/D4D03AQFryKnXEfwwyw/profile-displayphoto-shrink_400_400/B4DZSnEclOG8Ag-/0/1737969748769?e=1743638400&v=beta&t=SeWuIJmerRRnMfu7EV5A3EMt6TDBujRKTH32qiJpGmA" 
                         mediumImage="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png" 
                         description={""}
                          />

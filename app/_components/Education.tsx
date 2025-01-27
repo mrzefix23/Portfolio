@@ -15,6 +15,13 @@ export const EducationS: EducationProps[] = [
     },
     {
       image:
+        "https://cdn.worldvectorlogo.com/logos/university-of-cambridge-2.svg",
+      title: "Cambridge University",
+      role: "Linguaskill Certification",
+      date: "01/2024",
+    },
+    {
+      image:
         "https://media.licdn.com/dms/image/v2/C4E0BAQGXZPFarym18w/company-logo_100_100/company-logo_100_100/0/1642678074294/universite_de_bordeaux_logo?e=1745452800&v=beta&t=hiPrsYMSwGoBslpvAQtbDjfT3nGq_HXxT1NeyWU-4to",
       title: "University of Bordeaux",
       role: "Computer Science Degree",
