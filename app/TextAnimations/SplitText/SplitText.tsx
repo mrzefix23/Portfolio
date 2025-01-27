@@ -56,13 +56,13 @@ const SplitText: React.FC<SplitTextProps> = ({
         letters.map((_, i) => ({
             from: animationFrom,
             to: inView
-                ? async (next: (props: Record<string, any>) => Promise<void>) => {
-                    await next(animationTo);
-                    animatedCount.current += 1;
-                    if (animatedCount.current === letters.length && onLetterAnimationComplete) {
-                        onLetterAnimationComplete();
-                    }
-                }
+                ? async (next: (props: Partial<React.CSSProperties>) => Promise<void>) => {
+                      await next(animationTo);
+                      animatedCount.current += 1;
+                      if (animatedCount.current === letters.length && onLetterAnimationComplete) {
+                          onLetterAnimationComplete();
+                      }
+                  }
                 : animationFrom,
             delay: i * delay,
             config: { easing },
