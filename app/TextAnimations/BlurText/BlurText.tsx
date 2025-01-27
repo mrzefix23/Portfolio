@@ -9,8 +9,8 @@ interface BlurTextProps {
   direction?: 'top' | 'bottom';
   threshold?: number;
   rootMargin?: string;
-  animationFrom?: Partial<Record<string, SpringValue<any>>>;
-  animationTo?: Partial<Record<string, SpringValue<any>>>[];
+  animationFrom?: Partial<React.CSSProperties>;
+  animationTo?: Partial<React.CSSProperties>[];
   easing?: EasingFunction;
   onAnimationComplete?: () => void;
 }
@@ -34,20 +34,20 @@ const BlurText: React.FC<BlurTextProps> = ({
   const animatedCount = useRef(0);
 
   // Default animations based on direction
-  const defaultFrom: Partial<Record<string, SpringValue<any>>> = {
-    filter: 'blur(10px)' as any,
+  const defaultFrom: Partial<React.CSSProperties> = {
+    filter: 'blur(10px)',
     opacity: 0,
     transform: direction === 'top' ? 'translate3d(0,-50px,0)' : 'translate3d(0,50px,0)',
   };
 
-  const defaultTo: Partial<Record<string, SpringValue<any>>>[] = [
+  const defaultTo: Partial<React.CSSProperties>[] = [
     {
-      filter: 'blur(5px)' as any,
+      filter: 'blur(5px)',
       opacity: 0.5,
       transform: direction === 'top' ? 'translate3d(0,5px,0)' : 'translate3d(0,-5px,0)',
     },
     {
-      filter: 'blur(0px)' as any,
+      filter: 'blur(0px)',
       opacity: 1,
       transform: 'translate3d(0,0,0)',
     },
@@ -78,7 +78,7 @@ const BlurText: React.FC<BlurTextProps> = ({
     elements.map((_, i) => ({
       from: animationFrom || defaultFrom,
       to: inView
-        ? async (next: (arg: Partial<Record<string, SpringValue<any>>>) => Promise<void>) => {
+        ? async (next: (arg: Partial<React.CSSProperties>) => Promise<void>) => {
             for (const step of animationTo || defaultTo) {
               await next(step);
             }
@@ -98,7 +98,7 @@ const BlurText: React.FC<BlurTextProps> = ({
       {springs.map((props, index) => (
         <animated.span
           key={index}
-          style={props as SpringProps['style']}
+          style={props as Partial<React.CSSProperties>}
           className="inline-block transition-transform will-change-[transform,filter,opacity]"
         >
           {elements[index] === ' ' ? '\u00A0' : elements[index]}
