@@ -1,6 +1,6 @@
 import { Section } from "./Section";
 import { Card } from "@/components/ui/card";
-import { Car, Gamepad2, House, Plane, Rss, Swords } from "lucide-react";
+import { Car, Gamepad2,Rss, Swords } from "lucide-react";
 import { SideProjectProps, SideProject } from "./SideProjects";
 import { ContactCard } from "./ContactCard";
 import { Education, EducationS } from "./Education";
