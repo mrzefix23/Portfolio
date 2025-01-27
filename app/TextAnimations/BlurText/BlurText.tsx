@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
-import { useSprings, animated, SpringValue, SpringProps, EasingFunction } from '@react-spring/web';
+import { useSprings, animated, EasingFunction } from '@react-spring/web';
 
 interface BlurTextProps {
   text?: string;
