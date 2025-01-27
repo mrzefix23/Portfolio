@@ -36,7 +36,7 @@ export const Skills = () => {
             size={42}
             className="animate-bounce-rotate"
             style={{
-              animationDuration: "2s", // Contrôle de la vitesse de l'animation
+              animationDuration: "2s",
             }}
           />
           <h3 className="text-2xl font-semibold tracking-tight">C++</h3>

@@ -1,13 +1,12 @@
 import { Section } from "./Section";
 import { Badge } from "@/components/ui/badge"
 import { ContactCard } from "./ContactCard";
+import ShinyText from "../TextAnimations/ShinyText/ShinyText";
 
 export const Contact = () => {
     return <Section className="flex flex-col items-start gap-4">
         <Badge variant={"outline"}  className="text-lg px-4 py-2 rounded-lg">Contact me</Badge>
-            <h2 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-                I will be happy to work with you!
-            </h2>
+            <ShinyText className="pb-2 text-4xl font-semibold tracking-tight first:mt-0" text="I will be happy to work with you!" disabled={false} speed={3} />
             <div className="flex max-md:flex-col w-full gap-4 ">
           
             <ContactCard
