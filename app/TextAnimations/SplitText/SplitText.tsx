@@ -1,9 +1,3 @@
-/*
-	jsrepo 1.28.3
-	Installed from https://reactbits.dev/ts/tailwind/
-	27-01-2025
-*/
-
 import { useSprings, animated, SpringConfig } from '@react-spring/web';
 import { useEffect, useRef, useState } from 'react';
 
@@ -11,8 +5,8 @@ interface SplitTextProps {
     text?: string;
     className?: string;
     delay?: number;
-    animationFrom?: { opacity: number; transform: string };
-    animationTo?: { opacity: number; transform: string };
+    animationFrom?: Partial<React.CSSProperties>;
+    animationTo?: Partial<React.CSSProperties>;
     easing?: SpringConfig['easing'];
     threshold?: number;
     rootMargin?: string;
@@ -32,8 +26,7 @@ const SplitText: React.FC<SplitTextProps> = ({
     textAlign = 'center',
     onLetterAnimationComplete,
 }) => {
-    const words = text.split(' ').map(word => word.split(''));
-    const letters = words.flat();
+    const letters = text.split('');
     const [inView, setInView] = useState(false);
     const ref = useRef<HTMLParagraphElement>(null);
     const animatedCount = useRef(0);
@@ -63,7 +56,7 @@ const SplitText: React.FC<SplitTextProps> = ({
         letters.map((_, i) => ({
             from: animationFrom,
             to: inView
-                ? async (next: (props: any) => Promise<void>) => {
+                ? async (next: (props: Record<string, any>) => Promise<void>) => {
                     await next(animationTo);
                     animatedCount.current += 1;
                     if (animatedCount.current === letters.length && onLetterAnimationComplete) {
@@ -82,25 +75,14 @@ const SplitText: React.FC<SplitTextProps> = ({
             className={`split-parent overflow-hidden inline ${className}`}
             style={{ textAlign, whiteSpace: 'normal', wordWrap: 'break-word' }}
         >
-            {words.map((word, wordIndex) => (
-                <span key={wordIndex} style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>
-                    {word.map((letter, letterIndex) => {
-                        const index = words
-                            .slice(0, wordIndex)
-                            .reduce((acc, w) => acc + w.length, 0) + letterIndex;
-
-                        return (
-                            <animated.span
-                                key={index}
-                                style={springs[index] as unknown as React.CSSProperties}
-                                className="inline-block transform transition-opacity will-change-transform"
-                            >
-                                {letter}
-                            </animated.span>
-                        );
-                    })}
-                    <span style={{ display: 'inline-block', width: '0.3em' }}>&nbsp;</span>
-                </span>
+            {letters.map((letter, index) => (
+                <animated.span
+                    key={index}
+                    style={springs[index] as Partial<React.CSSProperties>}
+                    className="inline-block transform transition-opacity will-change-transform"
+                >
+                    {letter === ' ' ? '\u00A0' : letter}
+                </animated.span>
             ))}
         </p>
     );
