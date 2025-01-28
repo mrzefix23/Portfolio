@@ -12,6 +12,7 @@
     "@radix-ui/react-slot": "^1.1.1",
     "@react-spring/web": "^9.7.5",
     "@vercel/analytics": "^1.4.1",
+    "@vercel/speed-insights": "^1.1.0",
     "card": "^2.5.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
