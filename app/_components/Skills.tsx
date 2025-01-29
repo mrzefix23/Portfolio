@@ -6,7 +6,6 @@ import { JavaScriptLogo } from "@/components/icons/JavaScriptLogo";
 import { Section } from "./Section";
 import { Badge } from "@/components/ui/badge";
 import { Code } from "./Code";
-import ShinyText from "../TextAnimations/ShinyText/ShinyText";
 
 export const Skills = () => {
   return (
