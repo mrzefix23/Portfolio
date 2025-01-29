@@ -10,7 +10,7 @@ export const Status = () => {
     <Section className="flex max-md:flex-col items-start gap-4">
       <div className="flex-[3] w-full">
         <Card className="w-full p-4 flex flex-col gap-2 w-full">
-          <p className="text-lg text-muted-foreground">Personal Projects.</p>
+          <p className="text-xl text-muted-foreground">Personal Projects.</p>
           <div className="flex flex-col gap-4">
             {SIDE_PROJECTS.map((project, index) => (
               <SideProject

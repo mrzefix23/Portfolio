@@ -13,7 +13,9 @@ export const Skills = () => {
     <Section className="flex flex-col items-start gap-4">
       <Badge variant={"outline"}
         className="text-lg px-4 py-2 rounded-lg">Skills</Badge>
-      <ShinyText className="pb-2 text-4xl font-semibold tracking-tight first:mt-0" text="I love working on..." disabled={false} speed={3} />
+       <h2 className="pb-2 text-4xl font-semibold tracking-tight first:mt-0">
+        I love working on...
+      </h2>
       <div className="flex max-md:flex-col gap-4">
         {/* React Logo */}
         <div className="flex flex-col gap-2 flex-1">
