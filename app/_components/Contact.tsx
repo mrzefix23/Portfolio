@@ -1,7 +1,6 @@
 import { Section } from "./Section";
 import { Badge } from "@/components/ui/badge"
 import { ContactCard } from "./ContactCard";
-import ShinyText from "../TextAnimations/ShinyText/ShinyText";
 
 export const Contact = () => {
     return <Section className="flex flex-col items-start gap-4">
