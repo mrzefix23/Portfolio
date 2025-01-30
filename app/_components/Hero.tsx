@@ -36,7 +36,12 @@ export const Hero = () => {
         </div>
         <p className="text-base">
           I love coding in{" "}
-          <Code className="inline-flex items-center gap-1">React</Code>, currently
+          <Link
+            href="https://www.react.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          <Code className="inline-flex items-center gap-1">React</Code></Link>, currently
           studying at{" "}
           <Link
             href="https://www.u-bordeaux.fr/"

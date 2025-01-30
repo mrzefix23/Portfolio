@@ -6,7 +6,8 @@ import { JavaScriptLogo } from "@/components/icons/JavaScriptLogo";
 import { Section } from "./Section";
 import { Badge } from "@/components/ui/badge";
 import { Code } from "./Code";
-
+import Link from "next/link";
+ 
 export const Skills = () => {
   return (
     <Section className="flex flex-col items-start gap-4">
@@ -28,7 +29,15 @@ export const Skills = () => {
           />
           <h3 className="text-2xl font-semibold tracking-tight">React</h3>
           <p className="text-sm text-muted-foreground">
-            My main framework is <Code>React</Code>. And I also love working with <Code>Next.js</Code> as a backend and frontend framework.
+            My main framework is <Link
+            href="https://www.react.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          ><Code>React</Code>.</Link> And I also love working with <Link
+          href="https://www.nextjs.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        ><Code>Next.js</Code>.</Link> as a backend and frontend framework.
           </p>
         </div>
         {/* C++ Logo */}
@@ -42,7 +51,11 @@ export const Skills = () => {
           />
           <h3 className="text-2xl font-semibold tracking-tight">C++</h3>
           <p className="text-sm text-muted-foreground">
-            I have been working with <Code>C++</Code> for 2 years now. I love it because it&apos;s a very powerful language.
+            I have been working with <Link
+            href="https://www.cplusplus.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          ><Code>C++</Code>.</Link> for 7 months now. I love it because it&apos;s a very powerful language.
           </p>
         </div>
         {/* Python Logo */}
@@ -56,7 +69,11 @@ export const Skills = () => {
           />
           <h3 className="text-2xl font-semibold tracking-tight">Python</h3>
           <p className="text-sm text-muted-foreground">
-            I&apos;ve also been working with <Code>Python</Code> for 3 years, appreciating its versatility and simplicity for a wide range of applications.
+            I&apos;ve also been working with <Link
+            href="https://www.python.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          ><Code>Python</Code>.</Link> for 3 years, appreciating its versatility and simplicity for a wide range of applications.
           </p>
         </div>
         {/* JavaScript Logo */}
@@ -70,7 +87,11 @@ export const Skills = () => {
           />
           <h3 className="text-2xl font-semibold tracking-tight">JavaScript</h3>
           <p className="text-sm text-muted-foreground">
-            I&apos;ve been working with <Code>JavaScript</Code> for 3 years. It&apos;s my go-to language for dynamic and interactive web development, enabling me to build rich user interfaces.
+            I&apos;ve been working with <Link
+            href="https://www.javascript.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          ><Code>JavaScript</Code>.</Link> for 2 years. It&apos;s my go-to language for dynamic and interactive web development, enabling me to build rich user interfaces.
           </p>
         </div>
       </div>
