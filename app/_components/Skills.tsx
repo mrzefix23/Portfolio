@@ -36,7 +36,7 @@ export const Skills = () => {
             className="animate-spin"
             style={{ animationDuration: "4s", animationTimingFunction: "linear" }}
           />
-          <h3 className="mt-4 text-2xl font-semibold text-white">React</h3>
+          <h3 className="mt-4 text-2xl font-semibold">React</h3>
           <p className="text-sm text-gray-400 text-center">
             My main framework is{" "}
             <Link href="https://www.react.dev/" target="_blank" rel="noopener noreferrer">
@@ -56,7 +56,7 @@ export const Skills = () => {
             className="animate-bounce"
             style={{ animationDuration: "2s" }}
           />
-          <h3 className="mt-4 text-2xl font-semibold text-white">C++</h3>
+          <h3 className="mt-4 text-2xl font-semibold">C++</h3>
           <p className="text-sm text-gray-400 text-center px-2">
             I have been working with{" "}
             <Link href="https://www.cplusplus.com/" target="_blank" rel="noopener noreferrer">
@@ -73,7 +73,7 @@ export const Skills = () => {
             className="animate-sway"
             style={{ animationDuration: "2.5s", animationTimingFunction: "ease-in-out" }}
           />
-          <h3 className="mt-4 text-2xl font-semibold text-white">Python</h3>
+          <h3 className="mt-4 text-2xl font-semibold">Python</h3>
           <p className="text-sm text-gray-400 text-center">
             I&apos;ve been using{" "}
             <Link href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
@@ -90,7 +90,7 @@ export const Skills = () => {
             className="animate-wiggle"
             style={{ animationDuration: "2s" }}
           />
-          <h3 className="mt-4 text-2xl font-semibold text-white">JavaScript</h3>
+          <h3 className="mt-4 text-2xl font-semibold">JavaScript</h3>
           <p className="text-sm text-gray-400 text-center">
             I&apos;ve been working with{" "}
             <Link href="https://www.javascript.com/" target="_blank" rel="noopener noreferrer">

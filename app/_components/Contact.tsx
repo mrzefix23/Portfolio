@@ -29,7 +29,7 @@ export const Contact = () => {
           name="LinkedIn"
           image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1743638400&v=beta&t=lXWo7OJ_T6pcrDEIb_A0ulzjWxqnaOG3nqQH5r8d9DQ"
           mediumImage="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-          description={""}
+          description={"Follow me on LinkedIn"}
         />
 
         {/* Outlook */}
@@ -38,8 +38,8 @@ export const Contact = () => {
           url="mailto:yanismahdi.net@outlook.fr"
           name="Outlook"
           image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1743638400&v=beta&t=lXWo7OJ_T6pcrDEIb_A0ulzjWxqnaOG3nqQH5r8d9DQ"
-          mediumImage="https://e1.pngegg.com/pngimages/80/740/png-clipart-microsoft-office-2013-long-shadow-icons-outlook-shadow-thumbnail.png"
-          description={""}
+          mediumImage="https://thumbs.dreamstime.com/b/perspectives-81671472.jpg"
+          description={"Email me via Outlook"}
         />
 
         {/* GitHub */}
@@ -49,7 +49,7 @@ export const Contact = () => {
           name="Github"
           image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1743638400&v=beta&t=lXWo7OJ_T6pcrDEIb_A0ulzjWxqnaOG3nqQH5r8d9DQ"
           mediumImage="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png"
-          description={""}
+          description={"Check my projects on Github"}
         />
         
       </div>
