@@ -2,7 +2,7 @@ import { useState } from "react";
 import { LucideIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 export type SideProjectProps = {
   Logo: LucideIcon;
