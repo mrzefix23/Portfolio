@@ -41,7 +41,7 @@ export const SideProject = (props: SideProjectProps) => {
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
-            <DialogTitle className="text-center text-2xl font-bold mb-4">
+            <DialogTitle className="text-center text-2xl font-bold text-white mb-4">
               {props.title}
             </DialogTitle>
             <div className="flex justify-center">
@@ -64,7 +64,9 @@ export const SideProject = (props: SideProjectProps) => {
                 href={props.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-blue-500 text-white text-lg font-medium rounded-lg shadow-md hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1"
+                className="px-6 py-3 text-lg font-medium rounded-lg shadow-md transition-all duration-300 
+                bg-gray-800 text-gray-200 border border-gray-700 hover:bg-gray-700 hover:text-white 
+                transform hover:-translate-y-1 hover:shadow-blue-500/90"
               >
                 🚀 View Source Code
               </Link>
