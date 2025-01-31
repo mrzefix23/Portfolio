@@ -25,7 +25,7 @@ export const Hero = () => {
         <div className="w-full text-left">
           <SplitText
             text="Software Engineering Student"
-            className="text-3xl font-caption tracking-tight"
+            className="text-2xl font-caption tracking-tight"
             delay={30}
             animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
             animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
