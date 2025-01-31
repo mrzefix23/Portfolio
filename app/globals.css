@@ -171,7 +171,7 @@ body {
     animation: scale-rotate 3s ease-in-out infinite;
   }
   .animate-bounce-rotate {
-    animation: bounce-rotate 2s ease-in-out infinite;
+    animation: bounce-rotate 3s ease-in-out infinite;
   }
 
   @keyframes bounce-rotate {

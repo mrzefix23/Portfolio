@@ -16,17 +16,17 @@ export const Hero = () => {
       <div className="flex-[3] w-full flex flex-col gap-2">
         <BlurText
           text="Yanis Mahdi"
-          delay={150}
+          delay={80}
           animateBy="words"
           direction="top"
           onAnimationComplete={handleAnimationComplete}
-          className="font-caption font-bold text-5xl text-primary"
+          className="font-caption font-bold text-6xl text-primary"
         />
         <div className="w-full text-left">
           <SplitText
             text="Software Engineering Student"
-            className="text-2xl font-caption tracking-tight"
-            delay={60}
+            className="text-3xl font-caption tracking-tight"
+            delay={30}
             animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
             animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
             threshold={0.2}

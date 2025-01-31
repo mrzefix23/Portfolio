@@ -66,9 +66,14 @@ const config: Config = {
           "0%": { "background-position": "100%" },
           "100%": { "background-position": "-100%" },
         },
+        sway: {
+          "0%, 100%": { transform: "translateX(0px)" },
+          "50%": { transform: "translateX(10px)" },
+        },
       },
       animation: {
         shine: "shine 5s linear infinite",
+        sway: "sway 2s ease-in-out infinite",
       },
     },
   },

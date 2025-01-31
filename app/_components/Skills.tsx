@@ -7,96 +7,98 @@ import { Section } from "./Section";
 import { Badge } from "@/components/ui/badge";
 import { Code } from "./Code";
 import Link from "next/link";
- 
+
 export const Skills = () => {
   return (
-    <Section className="flex flex-col items-start gap-4">
-      <Badge variant={"outline"}
-        className="text-lg px-4 py-2 rounded-lg">Skills</Badge>
-       <h2 className="pb-2 text-4xl font-semibold tracking-tight first:mt-0">
+    <Section className="flex flex-col items-start gap-6 p-6 md:p-10 rounded-2xl">
+      {/* Badge Skills */}
+      <Badge
+        variant={"outline"}
+        className="text-2xl px-6 py-3 rounded-full bg-gray-800 text-gray-300 border border-gray-600 shadow-md 
+        hover:bg-gray-700 hover:text-white transition-all duration-300"
+      >
+        Skills
+      </Badge>
+
+      {/* Titre */}
+      <h2 className="text-4xl font-bold tracking-tight">
         I love working on...
       </h2>
-      <div className="flex max-md:flex-col gap-4">
-        {/* React Logo */}
-        <div className="flex flex-col gap-2 flex-1">
+
+      {/* Grid des compétences */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        
+        {/* React */}
+        <div className="flex flex-col items-center hover:bg-gray-800 p-6 rounded-xl shadow-md 
+          hover:shadow-xl transition-shadow duration-300">
           <ReactLogo
-            size={42}
+            size={48}
             className="animate-spin"
-            style={{
-              animationDuration: "4s",
-              animationTimingFunction: "linear",
-            }}
+            style={{ animationDuration: "4s", animationTimingFunction: "linear" }}
           />
-          <h3 className="text-2xl font-semibold tracking-tight">React</h3>
-          <p className="text-sm text-muted-foreground">
-            My main framework is <Link
-            href="https://www.react.dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-          ><Code>React</Code>.</Link> And I also love working with <Link
-          href="https://www.nextjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        ><Code>Next.js</Code>.</Link> as a backend and frontend framework.
+          <h3 className="mt-4 text-2xl font-semibold text-white">React</h3>
+          <p className="text-sm text-gray-400 text-center">
+            My main framework is{" "}
+            <Link href="https://www.react.dev/" target="_blank" rel="noopener noreferrer">
+              <Code>React</Code>
+            </Link>. I also love working with the framework{" "}
+            <Link href="https://www.nextjs.org/" target="_blank" rel="noopener noreferrer">
+              <Code>Next.js</Code>
+            </Link> for full-stack development.
           </p>
         </div>
-        {/* C++ Logo */}
-        <div className="flex flex-col gap-2 flex-1">
+
+        {/* C++ */}
+        <div className="flex flex-col items-center hover:bg-gray-800 p-6 rounded-xl shadow-md 
+          hover:shadow-xl transition-shadow duration-300">
           <CplusplusLogo
-            size={42}
-            className="animate-bounce-rotate"
-            style={{
-              animationDuration: "2s",
-            }}
+            size={48}
+            className="animate-bounce"
+            style={{ animationDuration: "2s" }}
           />
-          <h3 className="text-2xl font-semibold tracking-tight">C++</h3>
-          <p className="text-sm text-muted-foreground">
-            I have been working with <Link
-            href="https://www.cplusplus.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          ><Code>C++</Code>.</Link> for 7 months now. I love it because it&apos;s a very powerful language.
+          <h3 className="mt-4 text-2xl font-semibold text-white">C++</h3>
+          <p className="text-sm text-gray-400 text-center px-2">
+            I have been working with{" "}
+            <Link href="https://www.cplusplus.com/" target="_blank" rel="noopener noreferrer">
+              <Code>C++</Code>
+            </Link> for 7 months. I love its power and efficiency.
           </p>
         </div>
-        {/* Python Logo */}
-        <div className="flex flex-col gap-2 flex-1">
+
+        {/* Python */}
+        <div className="flex flex-col items-center hover:bg-gray-800 p-6 rounded-xl shadow-md 
+          hover:shadow-xl transition-shadow duration-300">
           <PythonLogo
-            size={42}
-            className="animate-scale-rotate"
-            style={{
-              animationDuration: "3s",
-            }}
+            size={48}
+            className="animate-sway"
+            style={{ animationDuration: "2.5s", animationTimingFunction: "ease-in-out" }}
           />
-          <h3 className="text-2xl font-semibold tracking-tight">Python</h3>
-          <p className="text-sm text-muted-foreground">
-            I&apos;ve also been working with <Link
-            href="https://www.python.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          ><Code>Python</Code>.</Link> for 3 years, appreciating its versatility and simplicity for a wide range of applications.
+          <h3 className="mt-4 text-2xl font-semibold text-white">Python</h3>
+          <p className="text-sm text-gray-400 text-center">
+            I&apos;ve been using{" "}
+            <Link href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
+              <Code>Python</Code>
+            </Link> for 3 years, leveraging its versatility in web, data science, and automation.
           </p>
         </div>
-        {/* JavaScript Logo */}
-        <div className="flex flex-col gap-2 flex-1">
+
+        {/* JavaScript */}
+        <div className="flex flex-col items-center hover:bg-gray-800 p-6 rounded-xl shadow-md 
+          hover:shadow-xl transition-shadow duration-300">
           <JavaScriptLogo
-            size={42}
+            size={48}
             className="animate-wiggle"
-            style={{
-              animationDuration: "1.5s",
-            }}
+            style={{ animationDuration: "2s" }}
           />
-          <h3 className="text-2xl font-semibold tracking-tight">JavaScript</h3>
-          <p className="text-sm text-muted-foreground">
-            I&apos;ve been working with <Link
-            href="https://www.javascript.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          ><Code>JavaScript</Code>.</Link> for 2 years. It&apos;s my go-to language for dynamic and interactive web development, enabling me to build rich user interfaces.
+          <h3 className="mt-4 text-2xl font-semibold text-white">JavaScript</h3>
+          <p className="text-sm text-gray-400 text-center">
+            I&apos;ve been working with{" "}
+            <Link href="https://www.javascript.com/" target="_blank" rel="noopener noreferrer">
+              <Code>JavaScript</Code>
+            </Link> for 2 years, building interactive and dynamic web experiences.
           </p>
         </div>
       </div>
     </Section>
   );
 };
-
-

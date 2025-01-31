@@ -1,3 +1,5 @@
+"use client";
+
 import { Section } from "./Section";
 import { Card } from "@/components/ui/card";
 import { Car, Gamepad2,Rss, Swords } from "lucide-react";
@@ -19,6 +21,7 @@ export const Status = () => {
                 title={project.title}
                 description={project.description}
                 url={project.url}
+                image={project.image}
               />
             ))}
           </div>
@@ -78,24 +81,27 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     title: "Takuzu",
     description: "A logic-based puzzle game that challenges your strategic thinking and problem-solving skills.",
     url: "https://github.com/mrzefix23/Takuzu",
+    image: "/images/takuzu.png",
   },
   {
     Logo: Swords,
     title: "CitySimulator",
-    description: "An immersive simulation game where you design, build, and manage a thriving city. You must balance resources to keep your city prosperous and sustainable.",
+    description: "An immersive simulation game where you design, build, and manage a thriving city.",
     url: "https://github.com/mrzefix23/Java_project_rts/",
+    image: "/images/citysimulator.png",
   },
-  {
+ {
     Logo: Car,
     title: "Ferrari's Lodge",
-    description: "A sleek and modern website created for a fictional luxury Ferrari lodge, showcasing high-end design and functionality.",
+    description: "A sleek and modern website created for a fictional luxury Ferrari lodge, featuring an interactive gallery where users can upload, delete, and explore multiple Ferrari images. Users can also add custom car drawings made directly on the website.",
     url: "https://github.com/mrzefix23/ferrari-s_loge",
-  },
+    image: "/images/ferrari.png",
+},
   {
     Logo: Rss,
     title: "Nachos",
-    description: "An educational operating system designed to teach fundamental concepts in operating systems and software development.",
+    description: "An educational operating system designed to teach fundamental OS concepts.",
     url: "https://github.com/mrzefix23/Nachos",
+    image: "/images/nachos.png",
   },
 ];
-
