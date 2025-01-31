@@ -33,7 +33,7 @@ export const Skills = () => {
           hover:shadow-xl transition-shadow duration-300">
           <ReactLogo
             size={48}
-            className="animate-spin"
+            className="hover:animate-spin"
             style={{ animationDuration: "4s", animationTimingFunction: "linear" }}
           />
           <h3 className="mt-4 text-2xl font-semibold">React</h3>
@@ -53,7 +53,7 @@ export const Skills = () => {
           hover:shadow-xl transition-shadow duration-300">
           <CplusplusLogo
             size={48}
-            className="animate-bounce"
+            className="hover:animate-bounce"
             style={{ animationDuration: "2s" }}
           />
           <h3 className="mt-4 text-2xl font-semibold">C++</h3>
@@ -70,7 +70,7 @@ export const Skills = () => {
           hover:shadow-xl transition-shadow duration-300">
           <PythonLogo
             size={48}
-            className="animate-sway"
+            className="hover:animate-sway"
             style={{ animationDuration: "2.5s", animationTimingFunction: "ease-in-out" }}
           />
           <h3 className="mt-4 text-2xl font-semibold">Python</h3>
@@ -87,7 +87,7 @@ export const Skills = () => {
           hover:shadow-xl transition-shadow duration-300">
           <JavaScriptLogo
             size={48}
-            className="animate-wiggle"
+            className="hover:animate-wiggle"
             style={{ animationDuration: "2s" }}
           />
           <h3 className="mt-4 text-2xl font-semibold">JavaScript</h3>
