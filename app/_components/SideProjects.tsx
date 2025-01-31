@@ -58,6 +58,7 @@ export const SideProject = (props: SideProjectProps) => {
                   quality={80}
                   layout="intrinsic"
                   className="rounded-lg shadow-lg"
+                  priority
                 />
               </motion.div>
             </div>
