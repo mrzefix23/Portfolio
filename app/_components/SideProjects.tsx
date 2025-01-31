@@ -34,11 +34,11 @@ export const SideProject = (props: SideProjectProps) => {
       </motion.div>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="w-full max-w-4xl p-8 bg-gray-951 rounded-lg shadow-2xl border border-gray-800">
+        <DialogContent className="w-full max-w-4xl p-8 bg-gray-950 rounded-lg shadow-2xl border border-gray-800">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
             <DialogTitle className="text-center text-2xl font-bold text-white mb-4">
@@ -55,6 +55,8 @@ export const SideProject = (props: SideProjectProps) => {
                   alt={props.title}
                   width={800}
                   height={500}
+                  quality={80}
+                  layout="intrinsic"
                   className="rounded-lg shadow-lg"
                 />
               </motion.div>
