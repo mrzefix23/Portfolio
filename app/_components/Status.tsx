@@ -100,7 +100,7 @@ const SIDE_PROJECTS: SideProjectProps[] = [
   {
     Logo: Rss,
     title: "Nachos",
-    description: "An educational operating system designed to teach fundamental OS concepts.",
+    description: "A university project for the Operating Systems course, where we implemented core OS functionalities like process management and file I/O on a minimal OS base.",
     url: "https://github.com/mrzefix23/Nachos",
     image: "/images/nachos.webp",
   },

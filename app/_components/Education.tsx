@@ -9,7 +9,7 @@ export const EducationS: EducationProps[] = [
     {
       image:
         "https://media.licdn.com/dms/image/v2/C4E0BAQGXZPFarym18w/company-logo_100_100/company-logo_100_100/0/1642678074294/universite_de_bordeaux_logo?e=1745452800&v=beta&t=hiPrsYMSwGoBslpvAQtbDjfT3nGq_HXxT1NeyWU-4to",
-      title: "Universié de Bordeaux",
+      title: "Université de Bordeaux",
       role: "Master Software Engineering",
       date: "2024-Now",
     },

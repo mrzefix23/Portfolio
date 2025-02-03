@@ -39,7 +39,7 @@ export const Contact = () => {
           name="Outlook"
           image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1743638400&v=beta&t=lXWo7OJ_T6pcrDEIb_A0ulzjWxqnaOG3nqQH5r8d9DQ"
           mediumImage="https://thumbs.dreamstime.com/b/perspectives-81671472.jpg"
-          description={"Email me via Outlook"}
+          description={"Email me !"}
         />
 
         {/* GitHub */}

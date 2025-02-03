@@ -49,7 +49,7 @@ export const Hero = () => {
             rel="noopener noreferrer"
           >
             <Code className="inline-flex items-center gap-1">
-              University of Bordeaux
+              Université de Bordeaux
             </Code>{" "}
           </Link>
           . Living in{" "}
