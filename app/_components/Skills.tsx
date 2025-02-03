@@ -58,12 +58,12 @@ export const Skills = () => {
           />
           <h3 className="mt-4 text-2xl font-semibold">C++</h3>
           <p className="text-sm text-gray-400 text-center px-2">
-            I have been working with{" "}
+          I enjoy working with{" "}
             <Link href="https://www.cplusplus.com/" target="_blank" rel="noopener noreferrer">
               <Code>C++</Code>
-            </Link> for 7 months. I love its power and efficiency.
+            </Link>{" "} for its performance, flexibility, and low-level control, making it ideal for high-performance applications.
           </p>
-        </div>
+          </div>
 
         {/* Python */}
         <div className="flex flex-col items-center hover:bg-gray-800 p-6 rounded-xl shadow-md 
