@@ -51,8 +51,7 @@ export const Hero = () => {
             <Code className="inline-flex items-center gap-1">
               Université de Bordeaux
             </Code>{" "}
-          </Link>
-          . Living in{" "}
+          </Link>. Living in{" "}
           <Code className="inline-flex items-center gap-1">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/langfr-225px-Flag_of_France.svg.png"

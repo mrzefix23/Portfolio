@@ -26,13 +26,13 @@ const GeistMono = localFont({
 
 // Métadonnées pour la page
 export const metadata: Metadata = {
-  title: "Yanis Mahdi | Software Engineer & Developer",
-  description: "Portfolio de Yanis Mahdi, étudiant en ingénierie logicielle spécialisé en développement web, React, et Next.js.",
+  title: "Yanis Mahdi | Software Engineering Student",
+  description: "Yanis Mahdi - Software Engineering Student. Discover my portfolio, my projects, and my skills in web development.",
   keywords: ["Yanis Mahdi", "Software Engineer", "Développeur Web", "React", "Next.js", "Programmation"],
   authors: [{ name: "Yanis Mahdi", url: "https://yanismahdi.com" }],
   openGraph: {
-    title: "Yanis Mahdi | Software Engineer & Developer",
-    description: "Portfolio de Yanis Mahdi, étudiant en ingénierie logicielle spécialisé en développement web, React, et Next.js.",
+    title: "Yanis Mahdi | Software Engineering Student",
+    description: "Yanis Mahdi - Software Engineering Student. Discover my portfolio, my projects, and my skills in web development.",
     url: "https://yanismahdi.com",
     siteName: "Yanis Mahdi",
     images: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Yanis Mahdi - Software Engineer & Developer",
+        alt: "Yanis Mahdi | Software Engineering Student",
       },
     ],
     locale: "en_US",
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yanis Mahdi | Software Engineer & Developer",
-    description: "Portfolio de Yanis Mahdi, étudiant en ingénierie logicielle spécialisé en développement web, React, et Next.js.",
+    title: "Yanis Mahdi | Software Engineering Student",
+    description: "Yanis Mahdi - Software Engineering Student. Discover my portfolio, my projects, and my skills in web development.",
     images: ["/og-image.webp"],
     creator: "@ton_handle_twitter",
   },
   icons: {
-    icon: "/favicon.ico", // Favicon dans /public
+    icon: "/favicon.ico", 
     shortcut: "/favicon.ico",
   },
 };
@@ -84,7 +84,7 @@ export default function RootLayout({
             "https://www.linkedin.com/in/yanis-mahdi-933a37238/",
           ],
           "jobTitle": "Software Engineer",
-          "description": "Portfolio de Yanis Mahdi, étudiant en ingénierie logicielle spécialisé en développement web, React, et Next.js."
+          "description": "Yanis Mahdi - Software Engineering Student. Discover my portfolio, my projects, and my skills in web development."
         }) }} />
       </head>
       <body
