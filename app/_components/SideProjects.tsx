@@ -24,10 +24,10 @@ export const SideProject = (props: SideProjectProps) => {
         onClick={() => setIsOpen(true)}
         className="flex items-center gap-5 p-7 rounded-lg transition-all hover:bg-accent/30 hover:shadow-2xl cursor-pointer border border-transparent hover:border-accent"
       >
-        <span className="bg-accent text-accent-foreground p-3 rounded-md shadow-lg">
+        <span className="bg-accent text-accent-foreground p-2 rounded-md shadow-lg">
           <props.Logo size={24} />
         </span>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-1">
           <p className="text-lg font-semibold">{props.title}</p>
           <p className="text-sm text-muted-foreground">{props.description}</p>
         </div>
