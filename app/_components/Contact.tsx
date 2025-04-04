@@ -27,7 +27,7 @@ export const Contact = () => {
           className="flex-1"
           url="https://www.linkedin.com/in/yanis-mahdi-933a37238/"
           name="LinkedIn"
-          image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1743638400&v=beta&t=lXWo7OJ_T6pcrDEIb_A0ulzjWxqnaOG3nqQH5r8d9DQ"
+          image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_400_400/B4EZSoWSIuG0Ag-/0/1737991201920?e=1749081600&v=beta&t=Ge9e2NVzfCZWy_XYUR5LyZ1MAXPfaXylfIHS1mtHxtY"
           mediumImage="https://cdn-icons-png.flaticon.com/512/174/174857.png"
           description={"Follow me on LinkedIn"}
         />
@@ -37,7 +37,7 @@ export const Contact = () => {
           className="flex-1"
           url="mailto:yanismahdi.net@outlook.fr"
           name="Outlook"
-          image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1743638400&v=beta&t=lXWo7OJ_T6pcrDEIb_A0ulzjWxqnaOG3nqQH5r8d9DQ"
+          image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_400_400/B4EZSoWSIuG0Ag-/0/1737991201920?e=1749081600&v=beta&t=Ge9e2NVzfCZWy_XYUR5LyZ1MAXPfaXylfIHS1mtHxtY"
           mediumImage="https://thumbs.dreamstime.com/b/perspectives-81671472.jpg"
           description={"Email me !"}
         />
@@ -47,7 +47,7 @@ export const Contact = () => {
           className="flex-1"
           url="https://github.com/mrzefix23"
           name="Github"
-          image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1743638400&v=beta&t=lXWo7OJ_T6pcrDEIb_A0ulzjWxqnaOG3nqQH5r8d9DQ"
+          image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_400_400/B4EZSoWSIuG0Ag-/0/1737991201920?e=1749081600&v=beta&t=Ge9e2NVzfCZWy_XYUR5LyZ1MAXPfaXylfIHS1mtHxtY"
           mediumImage="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png"
           description={"Check my projects on Github"}
         />

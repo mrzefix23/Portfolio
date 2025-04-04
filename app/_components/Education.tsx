@@ -8,7 +8,7 @@ export type EducationProps = {
 export const EducationS: EducationProps[] = [
     {
       image:
-        "https://media.licdn.com/dms/image/v2/C4E0BAQGXZPFarym18w/company-logo_100_100/company-logo_100_100/0/1642678074294/universite_de_bordeaux_logo?e=1745452800&v=beta&t=hiPrsYMSwGoBslpvAQtbDjfT3nGq_HXxT1NeyWU-4to",
+        "https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_400_400/B4EZSoWSIuG0Ag-/0/1737991201920?e=1749081600&v=beta&t=Ge9e2NVzfCZWy_XYUR5LyZ1MAXPfaXylfIHS1mtHxtY",
       title: "Université de Bordeaux",
       role: "Master Software Engineering",
       date: "2024-Now",
@@ -22,7 +22,7 @@ export const EducationS: EducationProps[] = [
     },
     {
       image:
-        "https://media.licdn.com/dms/image/v2/C4E0BAQGXZPFarym18w/company-logo_100_100/company-logo_100_100/0/1642678074294/universite_de_bordeaux_logo?e=1745452800&v=beta&t=hiPrsYMSwGoBslpvAQtbDjfT3nGq_HXxT1NeyWU-4to",
+        "https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_400_400/B4EZSoWSIuG0Ag-/0/1737991201920?e=1749081600&v=beta&t=Ge9e2NVzfCZWy_XYUR5LyZ1MAXPfaXylfIHS1mtHxtY",
       title: "Université de Bordeaux",
       role: "Computer Science Degree",
       date: "2021-2024",
