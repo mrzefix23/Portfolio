@@ -27,7 +27,7 @@ export const SideProject = (props: SideProjectProps) => {
         <span className="bg-accent text-accent-foreground p-3 rounded-md shadow-lg">
           <props.Logo size={24} />
         </span>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-1">
           <p className="text-lg font-semibold">{props.title}</p>
           <p className="text-sm text-muted-foreground">{props.description}</p>
         </div>
