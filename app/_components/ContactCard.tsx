@@ -1,8 +1,9 @@
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export const ContactCard = (props: {
   image: string;
@@ -27,15 +28,19 @@ export const ContactCard = (props: {
         <Card className="p-3 bg-background hover:bg-accent/10 transition-all duration-300 group flex items-center gap-4 border border-border/30 hover:border-primary/30">
           <div className="relative w-10 h-10 shrink-0">
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-md group-hover:bg-primary/30 transition-all" />
-            <img
+            <Image
               src={props.image}
               alt={`Profile picture of ${props.name}`}
+              width={40}
+              height={40}
               className="w-10 h-10 rounded-full object-cover relative z-10 border-2 border-background"
             />
             <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-background rounded-full p-0.5 border border-border/50 z-20 shadow-sm">
-              <img
+              <Image
                 src={props.mediumImage}
                 alt={`${props.name} logo`}
+                width={20}
+                height={20}
                 className="w-full h-full rounded-full object-cover"
               />
             </div>

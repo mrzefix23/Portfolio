@@ -4,11 +4,8 @@ import { PythonLogo } from "@/components/icons/PythonLogo";
 import { JavaScriptLogo } from "@/components/icons/JavaScriptLogo";
 import { Section } from "./Section";
 import { Badge } from "@/components/ui/badge";
-import { Code } from "./Code";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { Command, Database, Globe, Gauge, Server, Layout, Braces, Code as CodeIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Code as CodeIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 // Animation variants
@@ -55,7 +52,7 @@ export const Skills = () => {
           My Technical Expertise
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto md:mx-0">
-          I've developed a diverse set of skills throughout my journey as a software engineer. 
+          I&apos;ve developed a diverse set of skills throughout my journey as a software engineer. 
           Here are the technologies and languages I work with most frequently.
         </p>
       </motion.div>

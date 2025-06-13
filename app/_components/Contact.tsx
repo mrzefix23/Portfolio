@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { ContactCard } from "./ContactCard";
 import { motion } from "framer-motion";
 import { MapPin, ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 export const Contact = () => {
   return (
@@ -24,11 +25,11 @@ export const Contact = () => {
           Contact me
         </Badge>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
-          Let's Work Together
+          Let&apos;s Work Together
         </h2>
         <p className="text-muted-foreground">
           Feel free to reach out through any of the channels below.
-          I'm always open to discussing new projects and opportunities.
+          I&apos;m always open to discussing new projects and opportunities.
         </p>
       </motion.div>
 
@@ -41,10 +42,11 @@ export const Contact = () => {
         className="w-full max-w-4xl mx-auto mb-4"
       >
         <div className="relative w-full rounded-2xl overflow-hidden h-48">
-          <img 
+          <Image 
             src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/481000/481844-Bordeaux.jpg" 
             alt="Bordeaux City" 
-            className="w-full h-full object-cover"
+            fill
+            style={{ objectFit: 'cover' }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
           

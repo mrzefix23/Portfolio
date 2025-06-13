@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { CalendarIcon, MapPin, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+
 import { cn } from "@/lib/utils";
 
 export type EducationProps = {
@@ -56,9 +58,11 @@ export const Education = (props: EducationProps) => {
     >
       <div className="flex items-start gap-4 p-3 rounded-lg hover:bg-accent/10 transition-colors">
         <div className="w-10 h-10 overflow-hidden rounded-md flex-shrink-0 border border-border/30 shadow-sm">
-          <img
+          <Image
             src={props.image}
             alt={props.title}
+            width={40}
+            height={40}
             className="w-full h-full object-contain group-hover:scale-110 transition-all duration-500"
           />
         </div>

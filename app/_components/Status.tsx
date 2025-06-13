@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 // Animation variants
 const containerVariant = {
@@ -67,7 +68,7 @@ export const Status = () => {
             </div>
 
             <motion.div className="grid grid-cols-1 gap-6" variants={containerVariant}>
-              {SIDE_PROJECTS.map((project, index) => (
+              {SIDE_PROJECTS.map((project) => (
                 <motion.div 
                   key={project.title} 
                   variants={itemVariant}
@@ -84,9 +85,11 @@ export const Status = () => {
                       {/* Project Image */}
                       <div className="relative md:w-1/3 aspect-video md:aspect-square">
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/10 z-10" />
-                        <img 
+                        <Image 
                           src={project.image} 
                           alt={project.title} 
+                          width={400}
+                          height={225}
                           className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
                         />
                       </div>
@@ -171,9 +174,11 @@ export const Status = () => {
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 overflow-hidden rounded bg-muted flex items-center justify-center">
                           {edu.image ? (
-                            <img 
+                            <Image 
                               src={edu.image} 
                               alt={edu.title} 
+                              width={48}
+                              height={48}
                               className="w-full h-full object-cover"
                             />
                           ) : (

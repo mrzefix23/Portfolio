@@ -63,7 +63,7 @@ export const Header = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="hidden md:flex items-center space-x-8"
         >
-          {navItems.map((item, index) => (
+          {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}

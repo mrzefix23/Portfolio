@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Linkedin, Github, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const handleAnimationComplete = () => {
   console.log("Animation completed!");
@@ -48,7 +49,7 @@ export const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            Hello, I'm
+            Hello, I&apos;m
           </motion.span>
 
           <BlurText
@@ -90,8 +91,7 @@ export const Hero = () => {
           >
             <Code className="inline-flex items-center gap-1">React</Code>
           </Link>
-          , currently
-          studying at{" "}
+          , currently studying at{" "}
           <Link
             href="https://www.u-bordeaux.fr/"
             target="_blank"
@@ -104,10 +104,11 @@ export const Hero = () => {
           </Link>
           . Living in{" "}
           <Code className="inline-flex items-center gap-1">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/langfr-225px-Flag_of_France.svg.png"
-              style={{ width: 16, height: "auto" }}
-              alt="France's flag"
+            <Image
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/800px-Flag_of_France.svg.png"
+              width={16}
+              height={12}
+              alt="France&apos;s flag"
             />
             France
           </Code>{" "}
@@ -167,10 +168,12 @@ export const Hero = () => {
         <div className="relative">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 animate-pulse" />
           <div className="relative">
-            <img
+            <Image
               src="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1755129600&v=beta&t=QUjyIYZYy5vz_LAZSZKt5JbQqnDcsizOztJKd8N0BTI"
+              width={256}
+              height={256}
               className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-background"
-              alt="Yanis Mahdi's profile picture"
+              alt="Yanis Mahdi&apos;s profile picture"
             />
             <div
               className={cn(
