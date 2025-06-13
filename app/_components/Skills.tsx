@@ -2,103 +2,149 @@ import { ReactLogo } from "@/components/icons/ReactLogo";
 import { CplusplusLogo } from "@/components/icons/CplusplusLogo";
 import { PythonLogo } from "@/components/icons/PythonLogo";
 import { JavaScriptLogo } from "@/components/icons/JavaScriptLogo";
-
 import { Section } from "./Section";
 import { Badge } from "@/components/ui/badge";
 import { Code } from "./Code";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { Command, Database, Globe, Gauge, Server, Layout, Braces, Code as CodeIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+// Animation variants
+const containerVariant = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const itemVariant = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5
+    }
+  }
+};
 
 export const Skills = () => {
   return (
-    <Section className="flex flex-col items-start gap-6 p-6 md:p-10 rounded-2xl">
-      {/* Badge Skills */}
-      <Badge
-        variant={"outline"}
-        className="text-2xl px-6 py-3 rounded-full bg-gray-800 text-gray-300 border border-gray-600 shadow-md 
-        hover:bg-gray-700 hover:text-white transition-all duration-300"
+    <Section className="flex flex-col items-start gap-10">
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="w-full text-center md:text-left"
       >
-        Skills
-      </Badge>
+        <Badge
+          variant="outline"
+          className="mb-4 text-lg px-4 py-1.5 rounded-full bg-primary/10 border-primary/20 text-primary font-medium"
+        >
+          Skills
+        </Badge>
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
+          My Technical Expertise
+        </h2>
+        <p className="text-muted-foreground max-w-2xl mx-auto md:mx-0">
+          I've developed a diverse set of skills throughout my journey as a software engineer. 
+          Here are the technologies and languages I work with most frequently.
+        </p>
+      </motion.div>
 
-      {/* Titre */}
-      <h2 className="text-4xl font-bold tracking-tight">
-        I love working on...
-      </h2>
+      {/* Main Skills Grid */}
+      <motion.div
+        variants={containerVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full"
+      >
+        {SKILLS.map((skill) => (
+          <motion.div
+            key={skill.title}
+            variants={itemVariant}
+            className="group"
+          >
+            <div className="flex flex-col h-full rounded-xl border border-border/40 bg-card hover:border-primary/20 hover:shadow-lg transition-all duration-300 overflow-hidden">
+              {/* Header with icon and gradient */}
+              <div className="p-6 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-xl group-hover:bg-primary/10 transition-all duration-500" />
+                
+                <div className="relative z-10 flex flex-col items-center">
+                  <div className="mb-4 p-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-all duration-300">
+                    {skill.logo ? (
+                      skill.logo
+                    ) : (
+                      <CodeIcon size={30} className="text-primary" />
+                    )}
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-1 text-center group-hover:text-primary transition-colors">
+                    {skill.title}
+                  </h3>
+                  <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full">
+                    {skill.yearsExperience}
+                  </span>
+                </div>
+              </div>
 
-      {/* Grid des compétences */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-        
-        {/* React */}
-        <div className="flex flex-col items-center hover:bg-gray-800 p-6 rounded-xl shadow-md 
-          hover:shadow-xl transition-shadow duration-300">
-          <ReactLogo
-            size={48}
-            className="animate-spin"
-            style={{ animationDuration: "4s", animationTimingFunction: "linear" }}
-          />
-          <h3 className="mt-4 text-2xl font-semibold">React</h3>
-          <p className="text-sm text-gray-400 text-center">
-            My main framework is{" "}
-            <Link href="https://www.react.dev/" target="_blank" rel="noopener noreferrer">
-              <Code>React</Code>
-            </Link>. I also love working with the framework{" "}
-            <Link href="https://www.nextjs.org/" target="_blank" rel="noopener noreferrer">
-              <Code>Next.js</Code>
-            </Link> for full-stack development.
-          </p>
-        </div>
+              {/* Skill description */}
+              <div className="p-6 pt-2 flex flex-col flex-grow">
+                <p className="text-sm text-muted-foreground text-center mb-4">
+                  {skill.description}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
 
-        {/* C++ */}
-        <div className="flex flex-col items-center hover:bg-gray-800 p-6 rounded-xl shadow-md 
-          hover:shadow-xl transition-shadow duration-300">
-          <CplusplusLogo
-            size={48}
-            className="animate-bounce"
-            style={{ animationDuration: "2s" }}
-          />
-          <h3 className="mt-4 text-2xl font-semibold">C++</h3>
-          <p className="text-sm text-gray-400 text-center px-2">
-          I enjoy working with{" "}
-            <Link href="https://www.cplusplus.com/" target="_blank" rel="noopener noreferrer">
-              <Code>C++</Code>
-            </Link>{" "} for its performance, flexibility, and low-level control, making it ideal for high-performance applications.
-          </p>
-          </div>
-
-        {/* Python */}
-        <div className="flex flex-col items-center hover:bg-gray-800 p-6 rounded-xl shadow-md 
-          hover:shadow-xl transition-shadow duration-300">
-          <PythonLogo
-            size={48}
-            className="animate-sway"
-            style={{ animationDuration: "2.5s", animationTimingFunction: "ease-in-out" }}
-          />
-          <h3 className="mt-4 text-2xl font-semibold">Python</h3>
-          <p className="text-sm text-gray-400 text-center">
-            I&apos;ve been using{" "}
-            <Link href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
-              <Code>Python</Code>
-            </Link> for 3 years, leveraging its versatility in web, data science, and automation.
-          </p>
-        </div>
-
-        {/* JavaScript */}
-        <div className="flex flex-col items-center hover:bg-gray-800 p-6 rounded-xl shadow-md 
-          hover:shadow-xl transition-shadow duration-300">
-          <JavaScriptLogo
-            size={48}
-            className="animate-wiggle"
-            style={{ animationDuration: "2s" }}
-          />
-          <h3 className="mt-4 text-2xl font-semibold">JavaScript</h3>
-          <p className="text-sm text-gray-400 text-center">
-            I&apos;ve been working with{" "}
-            <Link href="https://www.javascript.com/" target="_blank" rel="noopener noreferrer">
-              <Code>JavaScript</Code>
-            </Link> for 2 years, building interactive and dynamic web experiences.
-          </p>
-        </div>
-      </div>
+      {/* Additional Skills */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="w-full mt-4"
+      >
+      </motion.div>
     </Section>
   );
 };
+
+// Skills data
+const SKILLS = [
+  {
+    title: "React",
+    logo: <ReactLogo size={30} className={cn("animate-spin", "text-primary")} style={{ animationDuration: "10s" }} />,
+    yearsExperience: "2+ years experience",
+    description: "Building modern, interactive UI components and full web applications with React and its ecosystem."
+  },
+  {
+    title: "JavaScript",
+    logo: <JavaScriptLogo size={30} className="text-primary animate-pulse" style={{ animationDuration: "3s" }} />,
+    yearsExperience: "3+ years experience",
+    description: "Crafting dynamic, responsive user experiences and implementing complex client-side functionality.",
+  },
+  {
+    title: "C++",
+    logo: <CplusplusLogo size={30} className="text-primary" />,
+    yearsExperience: "2+ years experience",
+    description: "Developing high-performance applications and systems with a focus on efficiency and low-level control.",
+  },
+  {
+    title: "Python",
+    logo: <PythonLogo size={30} className="text-primary" />,
+    yearsExperience: "3+ years experience",
+    description: "Creating scripts for automation, data analysis, backend services, and exploring machine learning concepts.",
+  },
+  
+];

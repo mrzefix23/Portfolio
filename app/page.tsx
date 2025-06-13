@@ -33,27 +33,35 @@ export default function Home() {
 
       <Spacing size="md" />
 
-      <motion.div variants={fadeIn}>
-        <Hero />
-      </motion.div>
+      <div id="home">
+        <motion.div variants={fadeIn}>
+          <Hero />
+        </motion.div>
+      </div>
 
       <Spacing size="md" />
 
-      <motion.div variants={fadeInUp}>
-        <Status />
-      </motion.div>
+      <div id="projects">
+        <motion.div variants={fadeInUp}>
+          <Status />
+        </motion.div>
+      </div>
 
       <Spacing size="md" />
 
-      <motion.div variants={fadeInUp}>
-        <Skills />
-      </motion.div>
+      <div id="skills">
+        <motion.div variants={fadeInUp}>
+          <Skills />
+        </motion.div>
+      </div>
 
       <Spacing size="md" />
 
-      <motion.div variants={fadeInUp}>
-        <Contact />
-      </motion.div>
+      <div id="contact">
+        <motion.div variants={fadeInUp}>
+          <Contact />
+        </motion.div>
+      </div>
 
       <Spacing size="md" />
 

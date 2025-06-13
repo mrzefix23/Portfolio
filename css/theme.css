@@ -1,0 +1,33 @@
+:root {
+    /* Variables pour le thème clair */
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #4a90e2;
+}
+
+[data-theme="dark"] {
+    /* Variables pour le thème sombre */
+    --background-color: #222222;
+    --text-color: #f5f5f5;
+    --primary-color: #6ba7f0;
+    
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+#theme-toggle {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    background: var(--background-color);
+    border: 1px solid var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+

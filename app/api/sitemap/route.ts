@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const baseUrl = "https://yanismahdi.com"; // Remplace par ton domaine réel
+  const baseUrl = "https://yanismahdi.com";
 
   // Liste des pages statiques à inclure
-  const pages = ["/"]; // Ajoute d'autres pages ici
+  const pages = ["/"];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

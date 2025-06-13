@@ -1,10 +1,15 @@
 import { cn } from "@/lib/utils";
-import { PropsWithChildren } from "react";
+import { HTMLAttributes } from "react";
 
-export const Section = (props: PropsWithChildren<{ className?: string }>) => {
-    return (
-        <section className={cn("max-w-7xl px-4 mx-auto flex items-center justify-center", props.className)}>
-            {props.children}
-        </section>
-    );
+interface SectionProps extends HTMLAttributes<HTMLElement> {}
+
+export const Section = ({ className, children, ...props }: SectionProps) => {
+  return (
+    <section
+      className={cn("max-w-7xl px-4 mx-auto flex items-center justify-center", className)}
+      {...props}
+    >
+      {children}
+    </section>
+  );
 };

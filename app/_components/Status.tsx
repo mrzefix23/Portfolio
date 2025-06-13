@@ -1,75 +1,286 @@
 "use client";
 
+import { useState } from "react";
 import { Section } from "./Section";
 import { Card } from "@/components/ui/card";
-import { Car, Gamepad2,Rss, Swords } from "lucide-react";
-import { SideProjectProps, SideProject } from "./SideProjects";
-import { ContactCard } from "./ContactCard";
-import { Education, EducationS } from "./Education";
+import { Car, Gamepad2, Rss, Swords, GithubIcon, ChevronRight, Book, Briefcase, CalendarIcon, Mail, Linkedin } from "lucide-react";
+import { SideProjectProps } from "./SideProjects";
+import { EducationS } from "./Education";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+// Animation variants
+const containerVariant = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariant = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5
+    }
+  }
+};
 
 export const Status = () => {
+  const [expandedProject, setExpandedProject] = useState<string | null>(null);
+
   return (
-    <Section className="flex max-md:flex-col items-start gap-4">
-      <div className="flex-[3] w-full">
-        <Card className="w-full p-4 flex flex-col gap-2 w-full">
-          <p className="text-xl text-muted-foreground">Personal Projects.</p>
-          <div className="flex flex-col gap-4">
-            {SIDE_PROJECTS.map((project, index) => (
-              <SideProject
-                key={index}
-                Logo={project.Logo}
-                title={project.title}
-                description={project.description}
-                url={project.url}
-                image={project.image}
-              />
-            ))}
-          </div>
-        </Card>
-      </div>
+    <Section className="flex flex-col gap-12">
+      {/* Section Header */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center max-w-3xl mx-auto"
+      >
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">My <span className="text-primary">Portfolio</span></h2>
+        <p className="text-muted-foreground">Explore my projects, education, and ways to connect with me.</p>
+      </motion.div>
 
-      <div className="flex-[2] w-full flex flex-col h-full gap-4">
-        <Card className="p-4 flex-1">
-          <p className="text-lg text-muted-foreground">Education</p>
-          <div className="flex flex-col gap-4">
-            {EducationS.map((educationItem, index) => (
-              <Education
-                key={index}
-                image={educationItem.image}
-                title={educationItem.title}
-                role={educationItem.role}
-                date={educationItem.date}
-              />
-            ))}
-          </div>
-        </Card>
+      {/* Main Content */}
+      <div className="flex max-md:flex-col items-start gap-6">
+        {/* Projects Section */}
+        <motion.div 
+          className="flex-[3] w-full"
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <Card className="w-full p-6 border border-border/40 hover:border-primary/20 transition-all duration-300 overflow-hidden shadow-md hover:shadow-lg">
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold">Personal Projects</h3>
+              <p className="text-muted-foreground text-sm mt-1">A showcase of my personal work</p>
+            </div>
 
-        <Card className="p-4 flex-1">
-          <p className="text-lg text-muted-foreground">Contact me</p>
-          <div className="flex flex-col space-y-4">
-            <ContactCard
-              url="https://www.linkedin.com/in/yanis-mahdi-933a37238/"
-              name="LinkedIn"
-              image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_400_400/B4EZSoWSIuG0Ag-/0/1737991201920?e=1749081600&v=beta&t=Ge9e2NVzfCZWy_XYUR5LyZ1MAXPfaXylfIHS1mtHxtY"
-              mediumImage="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-              description={""}
-            />
-            <ContactCard
-              url="mailto:yanismahdi.net@outlook.fr"
-              name="Outlook"
-              image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_400_400/B4EZSoWSIuG0Ag-/0/1737991201920?e=1749081600&v=beta&t=Ge9e2NVzfCZWy_XYUR5LyZ1MAXPfaXylfIHS1mtHxtY"
-              mediumImage="https://thumbs.dreamstime.com/b/perspectives-81671472.jpg"
-              description={""}
-            />
-            <ContactCard
-              url="https://github.com/mrzefix23"
-              name="Github"
-              image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_400_400/B4EZSoWSIuG0Ag-/0/1737991201920?e=1749081600&v=beta&t=Ge9e2NVzfCZWy_XYUR5LyZ1MAXPfaXylfIHS1mtHxtY"
-              mediumImage="https://cdn3.iconfinder.com/data/icons/inficons/512/github.png"
-              description={""}
-            />
-          </div>
-        </Card>
+            <motion.div className="grid grid-cols-1 gap-6" variants={containerVariant}>
+              {SIDE_PROJECTS.map((project, index) => (
+                <motion.div 
+                  key={project.title} 
+                  variants={itemVariant}
+                  className="group"
+                >
+                  <Card 
+                    className={cn(
+                      "overflow-hidden border-border/30 transition-all duration-300 group-hover:border-primary/50 shadow-sm group-hover:shadow-md",
+                      expandedProject === project.title ? "border-primary/50" : ""
+                    )}
+                    onClick={() => setExpandedProject(expandedProject === project.title ? null : project.title)}
+                  >
+                    <div className="flex flex-col md:flex-row">
+                      {/* Project Image */}
+                      <div className="relative md:w-1/3 aspect-video md:aspect-square">
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/10 z-10" />
+                        <img 
+                          src={project.image} 
+                          alt={project.title} 
+                          className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
+                        />
+                      </div>
+
+                      {/* Project Info */}
+                      <div className="p-4 md:p-5 md:w-2/3 flex flex-col">
+                        <div className="flex items-center justify-between mb-2">
+                          <div className="flex items-center gap-2">
+                            <div className="p-2 rounded-full bg-primary/10">
+                              <project.Logo size={18} className="text-primary" />
+                            </div>
+                            <h4 className="font-semibold text-lg">{project.title}</h4>
+                          </div>
+                          
+                          <Link href={project.url} target="_blank" rel="noopener noreferrer">
+                            <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full hover:bg-primary/10 hover:text-primary">
+                              <GithubIcon size={16} />
+                            </Button>
+                          </Link>
+                        </div>
+                        
+                        <p className={cn(
+                          "text-muted-foreground text-sm",
+                          expandedProject === project.title ? "" : "line-clamp-2 md:line-clamp-3"
+                        )}>
+                          {project.description}
+                        </p>
+                        
+                        <Button 
+                          variant="ghost" 
+                          size="sm" 
+                          className="self-start mt-2 text-primary hover:bg-primary/10 p-0 h-auto"
+                        >
+                          {expandedProject === project.title ? "Show less" : "Learn more"}
+                          <ChevronRight 
+                            size={16} 
+                            className={cn(
+                              "ml-1 transition-transform", 
+                              expandedProject === project.title ? "rotate-90" : ""
+                            )} 
+                          />
+                        </Button>
+                      </div>
+                    </div>
+                  </Card>
+                </motion.div>
+              ))}
+            </motion.div>
+          </Card>
+        </motion.div>
+
+        <div className="flex-[2] w-full flex flex-col gap-6">
+          {/* Education Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Card className="p-6 border-border/40 hover:border-primary/20 transition-all duration-300 shadow-md hover:shadow-lg">
+              <div className="flex items-center justify-between mb-5">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-full bg-primary/10">
+                    <Book size={18} className="text-primary" />
+                  </div>
+                  <h3 className="font-bold text-xl">Education</h3>
+                </div>
+              </div>
+
+              <div className="space-y-5">
+                {EducationS.map((edu, index) => (
+                  <motion.div 
+                    key={index}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="relative pl-6 border-l border-border"
+                  >
+                    <div className="absolute left-0 top-1 w-3 h-3 -translate-x-1.5 rounded-full bg-primary" />
+                    <div className="flex flex-col group">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 overflow-hidden rounded bg-muted flex items-center justify-center">
+                          {edu.image ? (
+                            <img 
+                              src={edu.image} 
+                              alt={edu.title} 
+                              className="w-full h-full object-cover"
+                            />
+                          ) : (
+                            <Briefcase size={20} className="text-muted-foreground" />
+                          )}
+                        </div>
+                        <div>
+                          <h4 className="font-medium text-base group-hover:text-primary transition-colors">
+                            {edu.title}
+                          </h4>
+                          <p className="text-sm text-muted-foreground">
+                            {edu.role}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="mt-2 flex items-center gap-2 text-xs text-muted-foreground">
+                        <CalendarIcon size={12} />
+                        <span>{edu.date}</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </Card>
+          </motion.div>
+
+          {/* Contact Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <Card className="p-6 border-border/40 hover:border-primary/20 transition-all duration-300 shadow-md hover:shadow-lg">
+              <div className="flex items-center justify-between mb-5">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-full bg-primary/10">
+                    <Mail size={18} className="text-primary" />
+                  </div>
+                  <h3 className="font-bold text-xl">Contact me</h3>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <motion.div 
+                  className="grid gap-4"
+                  variants={containerVariant}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                >
+                  <motion.div variants={itemVariant}>
+                    <Link 
+                      href="https://www.linkedin.com/in/yanis-mahdi-933a37238/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="flex items-center gap-4 p-3 rounded-lg bg-background hover:bg-accent/10 transition-all group"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all">
+                        <Linkedin size={18} className="text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium group-hover:text-primary transition-colors">LinkedIn</h4>
+                        <p className="text-xs text-muted-foreground">Connect professionally</p>
+                      </div>
+                      <ChevronRight size={16} className="ml-auto text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                    </Link>
+                  </motion.div>
+                  
+                  <motion.div variants={itemVariant}>
+                    <Link 
+                      href="mailto:yanismahdi.net@outlook.fr" 
+                      className="flex items-center gap-4 p-3 rounded-lg bg-background hover:bg-accent/10 transition-all group"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all">
+                        <Mail size={18} className="text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium group-hover:text-primary transition-colors">Email</h4>
+                        <p className="text-xs text-muted-foreground">yanismahdi.net@outlook.fr</p>
+                      </div>
+                      <ChevronRight size={16} className="ml-auto text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                    </Link>
+                  </motion.div>
+                  
+                  <motion.div variants={itemVariant}>
+                    <Link 
+                      href="https://github.com/mrzefix23" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="flex items-center gap-4 p-3 rounded-lg bg-background hover:bg-accent/10 transition-all group"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all">
+                        <GithubIcon size={18} className="text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium group-hover:text-primary transition-colors">GitHub</h4>
+                        <p className="text-xs text-muted-foreground">Check out my repositories</p>
+                      </div>
+                      <ChevronRight size={16} className="ml-auto text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                    </Link>
+                  </motion.div>
+                </motion.div>
+              </div>
+            </Card>
+          </motion.div>
+        </div>
       </div>
     </Section>
   );
@@ -79,28 +290,28 @@ const SIDE_PROJECTS: SideProjectProps[] = [
   {
     Logo: Gamepad2,
     title: "Takuzu",
-    description: "A logic-based puzzle game that challenges your strategic thinking and problem-solving skills.",
+    description: "A logic-based puzzle game that challenges your strategic thinking and problem-solving skills. Players must fill a grid with 0s and 1s following specific rules, making this game an excellent exercise for logical reasoning.",
     url: "https://github.com/mrzefix23/Takuzu",
     image: "/images/takuzu.webp",
   },
   {
     Logo: Swords,
     title: "CitySimulator",
-    description: "An immersive simulation game where you design, build, and manage a thriving city.",
+    description: "An immersive simulation game where you design, build, and manage a thriving city. With realistic resource management and citizen AI behavior, this project showcases advanced gaming mechanics and real-time simulation techniques.",
     url: "https://github.com/mrzefix23/Java_project_rts/",
     image: "/images/citysimulator.webp",
   },
- {
+  {
     Logo: Car,
     title: "Ferrari's Lodge",
-    description: "A sleek and modern website created for a fictional luxury Ferrari lodge, featuring an interactive gallery where users can upload, delete, and explore multiple Ferrari images. Users can also add custom car drawings made directly on the website.",
+    description: "A sleek and modern website created for a fictional luxury Ferrari lodge, featuring an interactive gallery where users can upload, delete, and explore multiple Ferrari images. Users can also add custom car drawings made directly on the website using an integrated canvas tool.",
     url: "https://github.com/mrzefix23/ferrari-s_loge",
     image: "/images/ferrari.webp",
-},
+  },
   {
     Logo: Rss,
     title: "Nachos",
-    description: "A university project for the Operating Systems course, where we implemented core OS functionalities like process management and file I/O on a minimal OS base.",
+    description: "A university project for the Operating Systems course, where we implemented core OS functionalities like process management and file I/O on a minimal OS base. This project demonstrates low-level system programming skills and deep understanding of operating system architecture concepts.",
     url: "https://github.com/mrzefix23/Nachos",
     image: "/images/nachos.webp",
   },
