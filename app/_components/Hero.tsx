@@ -81,16 +81,16 @@ export const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          Passionate about building elegant web solutions and exploring new
-          technologies. I love coding in{" "}
-          <Link
-            href="https://www.react.dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline decoration-primary decoration-2 hover:text-primary transition-colors"
-          >
-            <Code className="inline-flex items-center gap-1">React</Code>
-          </Link>
+          Passionate about applying Artificial Intelligence to solve challenges and create responsible solutions.  
+  Experienced in machine learning and deep learning, I enjoy turning data into real-world impact with{" "}
+  <Link
+    href="https://www.python.org/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline decoration-primary decoration-2 hover:text-primary transition-colors"
+  >
+    <Code className="inline-flex items-center gap-1">Python</Code>
+  </Link>
           , currently studying at{" "}
           <Link
             href="https://www.u-bordeaux.fr/"
@@ -102,7 +102,7 @@ export const Hero = () => {
               Université de Bordeaux
             </Code>{" "}
           </Link>
-          . Living in{" "}
+          . Based in{" "}
           <Code className="inline-flex items-center gap-1">
             <Image
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/800px-Flag_of_France.svg.png"
@@ -169,7 +169,7 @@ export const Hero = () => {
           <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 animate-pulse" />
           <div className="relative">
             <Image
-              src="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1755129600&v=beta&t=QUjyIYZYy5vz_LAZSZKt5JbQqnDcsizOztJKd8N0BTI"
+              src="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1759968000&v=beta&t=92l-ynAXvbs82Vof1DziBXgBCT5TxMjtQ7fOV2xt9H4"
               width={256}
               height={256}
               className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-background"

@@ -294,6 +294,13 @@ export const Status = () => {
 const SIDE_PROJECTS: SideProjectProps[] = [
   {
     Logo: Gamepad2,
+    title: "Checkers",
+    description: "Developed a checkers game from scratch using bitboards for efficient board representation, and implemented an AI opponent powered by Minimax and Alpha-Beta pruning algorithms.",
+    url: "https://github.com/mrzefix23/Checkers",
+    image: "/images/checkers.webp",
+  },
+  {
+    Logo: Gamepad2,
     title: "Takuzu",
     description: "A logic-based puzzle game that challenges your strategic thinking and problem-solving skills. Players must fill a grid with 0s and 1s following specific rules, making this game an excellent exercise for logical reasoning.",
     url: "https://github.com/mrzefix23/Takuzu",
