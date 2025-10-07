@@ -81,37 +81,11 @@ export const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          Passionate about applying Artificial Intelligence to solve challenges and create responsible solutions.  
-  Experienced in machine learning and deep learning, I enjoy turning data into real-world impact with{" "}
-  <Link
-    href="https://www.python.org/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="underline decoration-primary decoration-2 hover:text-primary transition-colors"
-  >
-    <Code className="inline-flex items-center gap-1">Python</Code>
-  </Link>
-          , currently studying at{" "}
-          <Link
-            href="https://www.u-bordeaux.fr/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline decoration-primary decoration-2 hover:text-primary transition-colors"
-          >
-            <Code className="inline-flex items-center gap-1">
-              Université de Bordeaux
-            </Code>{" "}
-          </Link>
-          . Based in{" "}
-          <Code className="inline-flex items-center gap-1">
-            <Image
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/800px-Flag_of_France.svg.png"
-              width={16}
-              height={12}
-              alt="France&apos;s flag"
-            />
-            France
-          </Code>{" "}
+          Passionate about software development and innovation, I enjoy tackling
+          technical challenges and collaborating in a stimulating environment.
+          Curious and thorough, I aim to contribute to ambitious projects while
+          continuously improving my skills in design and best development
+          practices.
         </motion.p>
 
         <motion.div

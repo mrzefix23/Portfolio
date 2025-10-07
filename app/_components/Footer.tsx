@@ -34,7 +34,7 @@ export const Footer = () => {
               </span>
             </div>
             <p className="text-sm text-muted-foreground max-w-xs text-center md:text-left">
-              Software engineering student passionate about leveraging Artificial Intelligence to solve complex problems and create innovative solutions.
+              Software engineering student passionate about building innovative solutions, tackling challenging problems, and continuously improving my skills in software design and development.
             </p>
           </motion.div>
 
