@@ -2,7 +2,6 @@
 
 import { Section } from "./Section";
 import Link from "next/link";
-import { Code } from "./Code";
 import SplitText from "../TextAnimations/SplitText/SplitText";
 import BlurText from "../TextAnimations/BlurText/BlurText";
 import { motion, useScroll, useTransform } from "framer-motion";
