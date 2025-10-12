@@ -142,7 +142,7 @@ export const Hero = () => {
           <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 animate-pulse" />
           <div className="relative">
             <Image
-              src="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1759968000&v=beta&t=92l-ynAXvbs82Vof1DziBXgBCT5TxMjtQ7fOV2xt9H4"
+              src="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1762992000&v=beta&t=6GXGGnXdZtZnm1rkETI39HmzhKsTm6D8uZYk03l-8k4"
               width={256}
               height={256}
               className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-background"

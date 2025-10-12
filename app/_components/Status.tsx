@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Section } from "./Section";
 import { Card } from "@/components/ui/card";
-import { Car, Gamepad2, Rss, Swords, GithubIcon, ChevronRight, Book, Briefcase, CalendarIcon, Mail, Linkedin } from "lucide-react";
+import { Car, Gamepad2, Swords, GithubIcon, ChevronRight, Book, Briefcase, CalendarIcon, Mail, Linkedin } from "lucide-react";
 import { SideProjectProps } from "./SideProjects";
 import { EducationS } from "./Education";
 import { motion } from "framer-motion";
@@ -294,6 +294,13 @@ export const Status = () => {
 const SIDE_PROJECTS: SideProjectProps[] = [
   {
     Logo: Gamepad2,
+    title: "CNRS FullStack Portal",
+    description: "Developed and maintained a large-scale IT portal for CNRS during a 4-month internship. Upgraded the tech stack (React, Next.js) to improve scalability and maintainability, integrated SSO via Keycloak, and redesigned the UI/UX for a modern, responsive interface. Implemented alerting modules and a favorites system to streamline workflows, integrated SSO via Keycloak, and redesigned the UI/UX for a modern, responsive interface. Implemented alerting modules and a favorites system to streamline workflows.",
+    url: "https://github.com/mrzefix23/",
+    image: "/images/portal.webp",
+  },
+  {
+    Logo: Gamepad2,
     title: "Checkers",
     description: "Developed a checkers game from scratch using bitboards for efficient board representation, and implemented an AI opponent powered by Minimax and Alpha-Beta pruning algorithms.",
     url: "https://github.com/mrzefix23/Checkers",
@@ -319,12 +326,5 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     description: "A sleek and modern website created for a fictional luxury Ferrari lodge, featuring an interactive gallery where users can upload, delete, and explore multiple Ferrari images. Users can also add custom car drawings made directly on the website using an integrated canvas tool.",
     url: "https://github.com/mrzefix23/ferrari-s_loge",
     image: "/images/ferrari.webp",
-  },
-  {
-    Logo: Rss,
-    title: "Nachos",
-    description: "A university project for the Operating Systems course, where we implemented core OS functionalities like process management and file I/O on a minimal OS base. This project demonstrates low-level system programming skills and deep understanding of operating system architecture concepts.",
-    url: "https://github.com/mrzefix23/Nachos",
-    image: "/images/nachos.webp",
   },
 ];
