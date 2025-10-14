@@ -1,12 +1,13 @@
 import { ReactLogo } from "@/components/icons/ReactLogo";
-import { CplusplusLogo } from "@/components/icons/CplusplusLogo";
-import { PythonLogo } from "@/components/icons/PythonLogo";
+import { DockerLogo } from "@/components/icons/DockerLogo";
+import { PostgreSQLIcon } from "@/components/icons/PostgreSQLIcon";
 import { JavaScriptLogo } from "@/components/icons/JavaScriptLogo";
 import { Section } from "./Section";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { Code as CodeIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+
 
 // Animation variants
 const containerVariant = {
@@ -132,16 +133,16 @@ const SKILLS = [
     description: "Crafting dynamic, responsive user experiences and implementing complex client-side functionality.",
   },
   {
-    title: "C++",
-    logo: <CplusplusLogo size={30} className="text-primary" />,
+    title: "Docker",
+    logo: <DockerLogo size={30} className="text-primary" />,
     yearsExperience: "2+ years experience",
-    description: "Developing high-performance applications and systems with a focus on efficiency and low-level control.",
+    description: "Containerizing applications for consistent environments, simplifying deployment, and enhancing scalability.",
   },
   {
-    title: "Python",
-    logo: <PythonLogo size={30} className="text-primary" />,
+    title: "PostgreSQL",
+    logo: <PostgreSQLIcon size={30} className="text-primary" />,
     yearsExperience: "3+ years experience",
-    description: "Creating scripts for automation, data analysis, backend services, and exploring machine learning concepts.",
+    description: "Designing and managing relational databases, writing complex queries, and ensuring data integrity.",
   },
   
 ];
