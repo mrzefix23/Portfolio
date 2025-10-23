@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yanis Mahdi's Portfolio
 
-## Getting Started
+**Welcome to my portfolio!**
 
-First, run the development server:
+![Portfolio Preview](public/images/portfolio_preview.webp)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 👨‍💻 About Me
+Hi, I'm Yanis — a passionate software engineering student with a strong love for coding and technology. This portfolio showcases my projects, contributions, and experiments in software development.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I enjoy tackling challenging problems, learning new technologies, and building practical solutions. Feel free to explore my work, provide feedback, or reach out if you'd like to collaborate on a project.  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Built With
+This portfolio was built using **React** and **Next.js** with **TypeScript**.  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤝 Contact & Collaboration
+I’m always open to discussing new opportunities, contributing to open-source projects, or receiving constructive feedback on my work.  
 
-## Learn More
+* **🌐 Website/Portfolio**: [https://yanismahdi.com](https://yanismahdi.com)  
+* **📧 Email**: [yanismahdi.net@outlook.fr](mailto:yanismahdi.net@outlook.fr)  
+* **🔗 LinkedIn**: [Yanis Mahdi](https://www.linkedin.com/in/mahdi-yanis/)  
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Thank you for visiting, and enjoy exploring my projects!  
