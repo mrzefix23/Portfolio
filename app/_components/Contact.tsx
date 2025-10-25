@@ -109,12 +109,12 @@ export const Contact = () => {
             url="https://www.linkedin.com/in/yanis-mahdi-933a37238/"
             name="LinkedIn"
             image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1762992000&v=beta&t=6GXGGnXdZtZnm1rkETI39HmzhKsTm6D8uZYk03l-8k4"
-            mediumImage="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+            mediumImage="/images/logos/linkedin_logo.webp"
             description="Connect professionally"
           />
         </motion.div>
 
-        {/* Email/Outlook */}
+        {/* Outlook */}
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 20 },
@@ -126,7 +126,7 @@ export const Contact = () => {
             url="mailto:yanismahdi.net@outlook.fr"
             name="Email"
             image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1762992000&v=beta&t=6GXGGnXdZtZnm1rkETI39HmzhKsTm6D8uZYk03l-8k4"
-            mediumImage="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/1200px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png"
+            mediumImage="/images/logos/outlook_logo.webp"
             description="yanismahdi.net@outlook.fr"
           />
         </motion.div>
@@ -143,7 +143,7 @@ export const Contact = () => {
             url="https://github.com/mrzefix23"
             name="GitHub"
             image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1762992000&v=beta&t=6GXGGnXdZtZnm1rkETI39HmzhKsTm6D8uZYk03l-8k4"
-            mediumImage="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            mediumImage="/images/logos/github_logo.webp"
             description="View my code repositories"
           />
         </motion.div>
