@@ -108,7 +108,7 @@ export const Contact = () => {
           <ContactCard
             url="https://www.linkedin.com/in/yanis-mahdi-933a37238/"
             name="LinkedIn"
-            image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1765411200&v=beta&t=-vh_1_zkcME0MI3RvZR3m68KVLkmwwXHDREIH3jF6dw"
+            image="/images/logo_yanis_mahdi.png"
             mediumImage="/images/logos/linkedin_logo.webp"
             description="Connect professionally"
           />
@@ -125,7 +125,7 @@ export const Contact = () => {
           <ContactCard
             url="mailto:yanismahdi.net@outlook.fr"
             name="Email"
-            image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1765411200&v=beta&t=-vh_1_zkcME0MI3RvZR3m68KVLkmwwXHDREIH3jF6dw"
+            image="/images/logo_yanis_mahdi.png"
             mediumImage="/images/logos/outlook_logo.webp"
             description="yanismahdi.net@outlook.fr"
           />
@@ -142,7 +142,7 @@ export const Contact = () => {
           <ContactCard
             url="https://github.com/mrzefix23"
             name="GitHub"
-            image="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_800_800/B4EZSoWSIuG0Ac-/0/1737991201950?e=1765411200&v=beta&t=-vh_1_zkcME0MI3RvZR3m68KVLkmwwXHDREIH3jF6dw"
+            image="/images/logo_yanis_mahdi.png"
             mediumImage="/images/logos/github_logo.webp"
             description="View my code repositories"
           />

@@ -137,30 +137,31 @@ export const Hero = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
-        <div className="absolute w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-primary/10 blur-3xl animate-pulse" />
+        <div className="absolute w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-primary/10 blur-3xl animate-pulse" />
+        
         <div className="relative">
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 animate-pulse" />
+          <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-full blur-md opacity-60 group-hover:opacity-100 transition duration-1000 animate-pulse" />
           <div className="relative">
             <Image
-              src="https://media.licdn.com/dms/image/v2/D4E03AQErGn741UDqag/profile-displayphoto-shrink_400_400/B4EZSoWSIuG0Ag-/0/1737991201920?e=1765411200&v=beta&t=JQYueSBihIx_lKVsYVASwGupebwi7WJPNwg9NqHeZz4"
-              width={256}
-              height={256}
-              className="w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-background"
-              alt="Yanis Mahdi&apos;s profile picture"
+              src="/images/logo_yanis_mahdi.png"
+              width={350}
+              height={350}
+              className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover"
+              alt="Yanis Mahdi's profile picture"
             />
             <div
               className={cn(
-                "absolute -bottom-2 -right-2 bg-background rounded-full px-4 py-2",
+                "absolute bottom-2 right-0 md:bottom-4 md:right-2 bg-background rounded-full px-3 py-1.5 md:px-4 md:py-2",
                 "border-2 border-primary shadow-lg"
               )}
             >
-              <span className="font-bold text-primary">{'<Developer />'}</span>
+              <span className="font-bold text-primary text-sm md:text-base">{'<Developer />'}</span>
             </div>
           </div>
         </div>
       </motion.div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator (reste le même) */}
       {showScrollIndicator && (
         <motion.div
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center"
