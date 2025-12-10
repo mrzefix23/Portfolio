@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Section } from "./Section";
 import { Card } from "@/components/ui/card";
-import { Car, Gamepad2, Swords, GithubIcon, ChevronRight, Book, Briefcase, CalendarIcon, Mail, Linkedin } from "lucide-react";
+import { Car, Gamepad2, GithubIcon, ChevronRight, Book, Briefcase, CalendarIcon, Mail, Linkedin, Calendar1, FolderLock, Dice6 } from "lucide-react";
 import { SideProjectProps } from "./SideProjects";
 import { EducationS } from "./Education";
 import { motion } from "framer-motion";
@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { TechBadge } from "./TechBadge";
 
 // Animation variants
 const containerVariant = {
@@ -112,16 +113,24 @@ export const Status = () => {
                         </div>
                         
                         <p className={cn(
-                          "text-muted-foreground text-sm",
+                          "text-muted-foreground text-sm mb-3",
                           expandedProject === project.title ? "" : "line-clamp-2 md:line-clamp-3"
                         )}>
                           {project.description}
                         </p>
                         
+                        {project.technologies && project.technologies.length > 0 && (
+                          <div className="flex flex-wrap gap-2 mb-3">
+                            {project.technologies.map((tech) => (
+                              <TechBadge key={tech} technology={tech} />
+                            ))}
+                          </div>
+                        )}
+                        
                         <Button 
                           variant="ghost" 
                           size="sm" 
-                          className="self-start mt-2 text-primary hover:bg-primary/10 p-0 h-auto"
+                          className="self-start text-primary hover:bg-primary/10 p-0 h-auto"
                         >
                           {expandedProject === project.title ? "Show less" : "Learn more"}
                           <ChevronRight 
@@ -293,18 +302,28 @@ export const Status = () => {
 
 const SIDE_PROJECTS: SideProjectProps[] = [
   {
-    Logo: Gamepad2,
+    Logo: Calendar1,
+    title: "TaskForge",
+    description: "TaskForge is a web-based project management platform that centralizes team workflows and boosts productivity. It lets you create and organize projects, manage issues and tasks, collaborate in real time, and track work progress efficiently. Built with Agile practices in mind, it supports sprint planning and version tracking, making it suitable for structured development cycles and long-term planning.",
+    url: "https://github.com/mrzefix23/TaskForge_Dev",
+    image: "/images/taskforge.webp",
+    technologies: ["Angular", "Spring Boot", "PostgreSQL"],
+  },
+  {
+    Logo: FolderLock,
     title: "CNRS FullStack Portal",
     description: "Developed and maintained a large-scale IT portal for CNRS during a 4-month internship. Upgraded the tech stack (React, Next.js) to improve scalability and maintainability, integrated SSO via Keycloak, and redesigned the UI/UX for a modern, responsive interface. Implemented alerting modules and a favorites system to streamline workflows, integrated SSO via Keycloak, and redesigned the UI/UX for a modern, responsive interface. Implemented alerting modules and a favorites system to streamline workflows.",
     url: "https://github.com/mrzefix23/",
     image: "/images/portal.webp",
+    technologies: ["React", "Next.js","MySQL", "Keycloak"],
   },
   {
-    Logo: Gamepad2,
+    Logo: Dice6,
     title: "Checkers",
     description: "Developed a checkers game from scratch using bitboards for efficient board representation, and implemented an AI opponent powered by Minimax and Alpha-Beta pruning algorithms.",
     url: "https://github.com/mrzefix23/Checkers",
     image: "/images/checkers.webp",
+    technologies: ["Python"],
   },
   {
     Logo: Gamepad2,
@@ -312,13 +331,7 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     description: "A logic-based puzzle game that challenges your strategic thinking and problem-solving skills. Players must fill a grid with 0s and 1s following specific rules, making this game an excellent exercise for logical reasoning.",
     url: "https://github.com/mrzefix23/Takuzu",
     image: "/images/takuzu.webp",
-  },
-  {
-    Logo: Swords,
-    title: "CitySimulator",
-    description: "An immersive simulation game where you design, build, and manage a thriving city. With realistic resource management and citizen AI behavior, this project showcases advanced gaming mechanics and real-time simulation techniques.",
-    url: "https://github.com/mrzefix23/Java_project_rts/",
-    image: "/images/citysimulator.webp",
+    technologies: ["C", "JavaScript", "HTML", "CSS"],
   },
   {
     Logo: Car,
@@ -326,5 +339,6 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     description: "A sleek and modern website created for a fictional luxury Ferrari lodge, featuring an interactive gallery where users can upload, delete, and explore multiple Ferrari images. Users can also add custom car drawings made directly on the website using an integrated canvas tool.",
     url: "https://github.com/mrzefix23/ferrari-s_loge",
     image: "/images/ferrari.webp",
+    technologies: ["Vue", "Spring Boot", "HTML", "CSS"],
   },
 ];
