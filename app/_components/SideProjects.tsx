@@ -4,14 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
 
 export type SideProjectProps = {
   Logo: LucideIcon;
   title: string;
   description: string;
-  url: string;
+  url?: string;
   image: string;
   liveUrl?: string;
   technologies?: string[];
@@ -90,27 +88,20 @@ export const SideProject = (props: SideProjectProps) => {
             )}
             
             <div className="flex flex-wrap gap-3 justify-end">
+              {props.url && (
               <Link
                 href={props.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button variant="outline" className="gap-2">
-                  <Github size={16} />
-                  View Source
-                </Button>
               </Link>
-              
+              )}
               {props.liveUrl && (
                 <Link
                   href={props.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button variant="default" className="gap-2">
-                    <ExternalLink size={16} />
-                    Live Demo
-                  </Button>
                 </Link>
               )}
             </div>

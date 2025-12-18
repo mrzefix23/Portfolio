@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Section } from "./Section";
 import { Card } from "@/components/ui/card";
-import { Car, Gamepad2, GithubIcon, ChevronRight, Book, Briefcase, CalendarIcon, Mail, Linkedin, Calendar1, FolderLock, Dice6 } from "lucide-react";
+import { Car, Gamepad2, GithubIcon, ChevronRight, Book, Briefcase, CalendarIcon, Mail, Linkedin, Calendar1, FolderLock, Dice6, ExternalLink } from "lucide-react";
 import { SideProjectProps } from "./SideProjects";
 import { EducationS } from "./Education";
 import { motion } from "framer-motion";
@@ -105,11 +105,22 @@ export const Status = () => {
                             <h4 className="font-semibold text-lg">{project.title}</h4>
                           </div>
                           
-                          <Link href={project.url} target="_blank" rel="noopener noreferrer">
-                            <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full hover:bg-primary/10 hover:text-primary">
-                              <GithubIcon size={16} />
-                            </Button>
-                          </Link>
+                          <div className="flex items-center gap-2">
+                            {project.liveUrl && (
+                              <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full hover:bg-primary/10 hover:text-primary">
+                                  <ExternalLink size={16} />
+                                </Button>
+                              </Link>
+                            )}
+                            {project.url && (
+                              <Link href={project.url} target="_blank" rel="noopener noreferrer">
+                                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full hover:bg-primary/10 hover:text-primary">
+                                  <GithubIcon size={16} />
+                                </Button>
+                              </Link>
+                            )}
+                          </div>
                         </div>
                         
                         <p className={cn(
@@ -306,6 +317,7 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     title: "TaskForge",
     description: "TaskForge is a web-based project management platform that centralizes team workflows and boosts productivity. It lets you create and organize projects, manage issues and tasks, collaborate in real time, and track work progress efficiently. Built with Agile practices in mind, it supports sprint planning and version tracking, making it suitable for structured development cycles and long-term planning.",
     url: "https://github.com/mrzefix23/TaskForge_Dev",
+    liveUrl: "https://taskforge.yanismahdi.com/",
     image: "/images/taskforge.webp",
     technologies: ["Angular", "Spring Boot", "PostgreSQL"],
   },
@@ -313,7 +325,6 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     Logo: FolderLock,
     title: "CNRS FullStack Portal",
     description: "Developed and maintained a large-scale IT portal for CNRS during a 4-month internship. Upgraded the tech stack (React, Next.js) to improve scalability and maintainability, integrated SSO via Keycloak, and redesigned the UI/UX for a modern, responsive interface. Implemented alerting modules and a favorites system to streamline workflows, integrated SSO via Keycloak, and redesigned the UI/UX for a modern, responsive interface. Implemented alerting modules and a favorites system to streamline workflows.",
-    url: "https://github.com/mrzefix23/",
     image: "/images/portal.webp",
     technologies: ["React", "Next.js","MySQL", "Keycloak"],
   },
